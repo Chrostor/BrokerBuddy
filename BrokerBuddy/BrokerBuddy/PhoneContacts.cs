@@ -8,7 +8,7 @@ namespace BrokerBuddy
 {
     internal class PhoneContacts
     {
-        public string PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
         public string NumberType { get; set; }
     }
 }
