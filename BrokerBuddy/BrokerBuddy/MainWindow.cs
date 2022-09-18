@@ -2,6 +2,7 @@ namespace BrokerBuddy
 {
     public partial class MainWindow : Form
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -20,7 +21,10 @@ namespace BrokerBuddy
 
         private void Add_Click(object sender, EventArgs e)
         {
+            List<ClientData> testContacts = SampleData.createSamples();
             DataWindow form2 = new DataWindow();
+            form2.CustNameData.Text = testContacts[1].customerName;
+            form2.BusNameData.Text = testContacts[1].businessName;
             form2.Show();
         }
 
@@ -34,10 +38,7 @@ namespace BrokerBuddy
 
         }
 
-        private void conNameBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
 
     }

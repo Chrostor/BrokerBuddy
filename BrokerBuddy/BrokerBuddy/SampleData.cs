@@ -8,19 +8,20 @@ namespace BrokerBuddy
 {
     internal class SampleData
     {
-        List<ClientData> sampleData = new List<ClientData>();
+        
 
-        private List<ClientData> createSamples() 
+        static public List<ClientData> createSamples() 
         {
             var samples = new List<ClientData>();
             var sam1 = new ClientData
             {
                 ID = 1,
-                Customer = true,
-                Site = false,
-                CustomerName = "Big Ricks",
-                BusinessName = "None",
-                Contacts = new List<Contact> 
+                customer = true,
+                site = false,
+                customerName = "Big Ricks",
+                businessName = "None",
+                location = "Fort Worth, Texas",
+                contacts = new List<Contact> 
                 {
                     new Contact
                     {
@@ -38,19 +39,21 @@ namespace BrokerBuddy
                         }
                     }
                 },
-                FCFSBA = true,
-                notes1 = "Fast workers",
-                notes2 = "None",
-                notes3 = "None"
+                FCFS = true,
+                BA = false,
+                notesGeneral = "Fast workers",
+                notesEquipment = "None",
+                notesSpecialRequirements = "None"
             };
             var sam2 = new ClientData
             {
                 ID = 2,
-                Customer = false,
-                Site = true,
-                CustomerName = "None",
-                BusinessName = "Warehouse 51",
-                Contacts = new List<Contact>
+                customer = false,
+                site = true,
+                customerName = "None",
+                businessName = "Warehouse 51",
+                location = "Atlanta, Georgia",
+                contacts = new List<Contact>
                 {
                     new Contact
                     {
@@ -83,19 +86,21 @@ namespace BrokerBuddy
                         }
                     }
                 },
-                FCFSBA = true,
-                notes1 = "Must call before 10 am",
-                notes2 = "Dock closes at 4 pm",
-                notes3 = "None"
+                FCFS = true,
+                BA = false,
+                notesGeneral = "Must call before 10 am",
+                notesEquipment = "Dock closes at 4 pm",
+                notesSpecialRequirements = "None"
             };
             var sam3 = new ClientData
             {
                 ID = 3,
-                Customer = true,
-                Site = true,
-                CustomerName = "Cagene Manufacturing",
-                BusinessName = "Cagene Manufacturing",
-                Contacts = new List<Contact>
+                customer = true,
+                site = true,
+                customerName = "Cagene Manufacturing",
+                businessName = "Cagene Manufacturing",
+                location = "Portland, Oregon",
+                contacts = new List<Contact>
                 {
                     new Contact
                     {
@@ -118,10 +123,11 @@ namespace BrokerBuddy
                         }
                     }
                 },
-                FCFSBA = false,
-                notes1 = "Don't call on cell unless ABSOLUTELY NECESSARY",
-                notes2 = "Dock opens at 10, closes at 6",
-                notes3 = "They usually don't answer last two hours of the day"
+                FCFS = false,
+                BA = true,
+                notesGeneral = "Don't call on cell unless ABSOLUTELY NECESSARY",
+                notesEquipment = "Dock opens at 10, closes at 6",
+                notesSpecialRequirements = "They usually don't answer last two hours of the day"
             };
             //var sam4 = new ClientData();
             //var sam5 = new ClientData();

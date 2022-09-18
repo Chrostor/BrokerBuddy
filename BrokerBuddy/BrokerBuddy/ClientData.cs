@@ -9,14 +9,16 @@ namespace BrokerBuddy
     internal class ClientData
     {
         public int ID { get; set; }
-        public bool Customer { get; set; }
-        public bool Site { get; set; }
-        public string CustomerName { get; set; }
-        public string BusinessName { get; set; }
-        public List<Contact> Contacts { get; set; }
-        public bool FCFSBA { get; set; }
-        public string notes1 { get; set; }
-        public string notes2 { get; set; }
-        public string notes3 { get; set; }
+        public bool customer { get; set; }
+        public bool site { get; set; }
+        public string customerName { get; set; }
+        public string businessName { get; set; }
+        public string location { get; set; }
+        public List<Contact> contacts { get; set; }
+        public bool FCFS { get; set; }
+        public bool BA { get; set; }
+        public string notesGeneral { get; set; }
+        public string notesEquipment { get; set; }
+        public string notesSpecialRequirements { get; set; }
     }
 }

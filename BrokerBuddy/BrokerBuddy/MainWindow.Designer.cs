@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.Greeting = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.Button();
             this.ListAll = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             // 
             // Search
             // 
+            this.Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Search.Location = new System.Drawing.Point(12, 9);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(75, 61);
@@ -63,6 +65,7 @@
             // 
             // ListAll
             // 
+            this.ListAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListAll.Location = new System.Drawing.Point(632, 9);
             this.ListAll.Name = "ListAll";
             this.ListAll.Size = new System.Drawing.Size(75, 61);
@@ -73,6 +76,7 @@
             // 
             // Add
             // 
+            this.Add.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Add.Location = new System.Drawing.Point(713, 9);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 61);
@@ -83,7 +87,7 @@
             // 
             // custNameBox
             // 
-            this.custNameBox.Location = new System.Drawing.Point(12, 102);
+            this.custNameBox.Location = new System.Drawing.Point(12, 108);
             this.custNameBox.Name = "custNameBox";
             this.custNameBox.Size = new System.Drawing.Size(120, 23);
             this.custNameBox.TabIndex = 4;
@@ -91,7 +95,7 @@
             // 
             // busNameBox
             // 
-            this.busNameBox.Location = new System.Drawing.Point(12, 155);
+            this.busNameBox.Location = new System.Drawing.Point(12, 161);
             this.busNameBox.Name = "busNameBox";
             this.busNameBox.Size = new System.Drawing.Size(120, 23);
             this.busNameBox.TabIndex = 5;
@@ -99,36 +103,38 @@
             // 
             // conNameBox
             // 
-            this.conNameBox.Location = new System.Drawing.Point(12, 211);
+            this.conNameBox.Location = new System.Drawing.Point(12, 217);
             this.conNameBox.Name = "conNameBox";
             this.conNameBox.Size = new System.Drawing.Size(120, 23);
             this.conNameBox.TabIndex = 6;
-            this.conNameBox.TextChanged += new System.EventHandler(this.conNameBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 15);
+            this.label1.Size = new System.Drawing.Size(124, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "Customer Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(12, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(116, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Business Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(12, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
+            this.label3.Size = new System.Drawing.Size(109, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Contact Name";
             // 
@@ -149,6 +155,7 @@
             this.Controls.Add(this.ListAll);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.Greeting);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "Broker Buddy";
             this.ResumeLayout(false);
