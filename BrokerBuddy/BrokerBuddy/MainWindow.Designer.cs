@@ -57,7 +57,7 @@
             this.Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Search.Location = new System.Drawing.Point(12, 9);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(75, 61);
+            this.Search.Size = new System.Drawing.Size(120, 61);
             this.Search.TabIndex = 1;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.custNameBox.Location = new System.Drawing.Point(12, 108);
             this.custNameBox.Name = "custNameBox";
             this.custNameBox.Size = new System.Drawing.Size(120, 23);
-            this.custNameBox.TabIndex = 4;
+            this.custNameBox.TabIndex = 1;
             this.custNameBox.TextChanged += new System.EventHandler(this.custNameBox_TextChanged);
             // 
             // busNameBox
@@ -98,7 +98,7 @@
             this.busNameBox.Location = new System.Drawing.Point(12, 161);
             this.busNameBox.Name = "busNameBox";
             this.busNameBox.Size = new System.Drawing.Size(120, 23);
-            this.busNameBox.TabIndex = 5;
+            this.busNameBox.TabIndex = 2;
             this.busNameBox.TextChanged += new System.EventHandler(this.busNameBox_TextChanged);
             // 
             // conNameBox
@@ -106,7 +106,7 @@
             this.conNameBox.Location = new System.Drawing.Point(12, 217);
             this.conNameBox.Name = "conNameBox";
             this.conNameBox.Size = new System.Drawing.Size(120, 23);
-            this.conNameBox.TabIndex = 6;
+            this.conNameBox.TabIndex = 3;
             // 
             // label1
             // 

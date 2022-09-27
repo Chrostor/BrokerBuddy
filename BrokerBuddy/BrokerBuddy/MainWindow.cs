@@ -16,16 +16,18 @@ namespace BrokerBuddy
 
         private void ListAll_Click(object sender, EventArgs e)
         {
-
+            List<ClientData> testContacts = SampleData.createSamples();
+            //NewClientData form2 = new NewClientData();
+            //form2.CustNameData.Text = testContacts[1].customerName;
+            //form2.BusNameData.Text = testContacts[1].businessName;
+            SearchResults SR = new SearchResults();
+            SR.Show();
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
-            List<ClientData> testContacts = SampleData.createSamples();
-            DataWindow form2 = new DataWindow();
-            form2.CustNameData.Text = testContacts[1].customerName;
-            form2.BusNameData.Text = testContacts[1].businessName;
-            form2.Show();
+            
+
         }
 
         private void custNameBox_TextChanged(object sender, EventArgs e)
