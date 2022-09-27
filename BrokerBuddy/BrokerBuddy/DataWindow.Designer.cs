@@ -68,9 +68,10 @@
             this.CNT1_PN1_Ext_TB = new System.Windows.Forms.TextBox();
             this.CNT1_Ext_Label = new System.Windows.Forms.Label();
             this.LocationLabel = new System.Windows.Forms.Label();
-            this.LocationData = new System.Windows.Forms.TextBox();
             this.CNT1_PN1_Label = new System.Windows.Forms.Label();
             this.EditContactBTN = new System.Windows.Forms.Button();
+            this.LocationData = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CustomerNameLabel
@@ -454,18 +455,9 @@
             this.LocationLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LocationLabel.Location = new System.Drawing.Point(12, 78);
             this.LocationLabel.Name = "LocationLabel";
-            this.LocationLabel.Size = new System.Drawing.Size(151, 21);
+            this.LocationLabel.Size = new System.Drawing.Size(129, 21);
             this.LocationLabel.TabIndex = 40;
-            this.LocationLabel.Text = "Location (City, State)";
-            // 
-            // LocationData
-            // 
-            this.LocationData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LocationData.Location = new System.Drawing.Point(177, 75);
-            this.LocationData.Name = "LocationData";
-            this.LocationData.ReadOnly = true;
-            this.LocationData.Size = new System.Drawing.Size(209, 29);
-            this.LocationData.TabIndex = 41;
+            this.LocationLabel.Text = "Location Address";
             // 
             // CNT1_PN1_Label
             // 
@@ -487,6 +479,25 @@
             this.EditContactBTN.UseVisualStyleBackColor = true;
             this.EditContactBTN.Click += new System.EventHandler(this.EditContactBTN_Click);
             // 
+            // LocationData
+            // 
+            this.LocationData.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LocationData.Location = new System.Drawing.Point(177, 77);
+            this.LocationData.Name = "LocationData";
+            this.LocationData.ReadOnly = true;
+            this.LocationData.Size = new System.Drawing.Size(209, 56);
+            this.LocationData.TabIndex = 4;
+            this.LocationData.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(422, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 61);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Delete Contact (TODO)";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // DataWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -494,9 +505,10 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(801, 617);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LocationData);
             this.Controls.Add(this.EditContactBTN);
             this.Controls.Add(this.CNT1_PN1_Label);
-            this.Controls.Add(this.LocationData);
             this.Controls.Add(this.LocationLabel);
             this.Controls.Add(this.CNT1_Ext_Label);
             this.Controls.Add(this.CNT1_PN1_Ext_TB);
@@ -536,7 +548,6 @@
             this.Controls.Add(this.CustNameData);
             this.Controls.Add(this.BusinessNameLabel);
             this.Controls.Add(this.CustomerNameLabel);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DataWindow";
             this.Text = "DATA";
@@ -586,8 +597,9 @@
         public TextBox CNT1_PN1_Ext_TB;
         private Label CNT1_Ext_Label;
         private Label LocationLabel;
-        public TextBox LocationData;
         private Label CNT1_PN1_Label;
         private Button EditContactBTN;
+        public RichTextBox LocationData;
+        private Button button1;
     }
 }
