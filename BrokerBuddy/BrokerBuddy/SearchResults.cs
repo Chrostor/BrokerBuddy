@@ -12,11 +12,12 @@ namespace BrokerBuddy
 {
     public partial class SearchResults : Form
     {
+        List<ClientData> sd = SampleData.createSamples();
         public SearchResults()
         {
             InitializeComponent();
 
-            var sd = SampleData.createSamples();
+            //var sd = SampleData.createSamples();
             ListView lv = SearchResultView;
             lv.Items.Clear();
             foreach (var item in sd)
@@ -37,7 +38,7 @@ namespace BrokerBuddy
         {
             try
             {
-                var sd = SampleData.createSamples();
+                //var sd = SampleData.createSamples();
                 //Target gets the ID of the data object
                 var target = int.Parse(SearchResultView.SelectedItems[0].Text);
                 DataWindow dw = new DataWindow();

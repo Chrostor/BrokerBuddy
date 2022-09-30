@@ -66,7 +66,8 @@ namespace BrokerBuddy
                             new PhoneContacts
                             {
                                 PhoneNumber = 6825468792,
-                                NumberType = "Office"
+                                NumberType = "Office",
+                                Ext = 3084
                             }
                         }
                     },

@@ -472,6 +472,7 @@
             this.AddPN1.TabIndex = 44;
             this.AddPN1.Text = "Add Phone Number";
             this.AddPN1.UseVisualStyleBackColor = true;
+            this.AddPN1.Click += new System.EventHandler(this.AddPN1_Click);
             // 
             // LocationData
             // 
