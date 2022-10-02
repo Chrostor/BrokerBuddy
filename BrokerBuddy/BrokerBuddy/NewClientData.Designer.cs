@@ -70,9 +70,12 @@
             this.LocationLabel = new System.Windows.Forms.Label();
             this.CNT1_PN1_Label = new System.Windows.Forms.Label();
             this.AddContactBtn = new System.Windows.Forms.Button();
-            this.AddPN1 = new System.Windows.Forms.Button();
             this.LocationData = new System.Windows.Forms.RichTextBox();
             this.SaveBtn = new System.Windows.Forms.Button();
+            this.CNT1_PN2_Type_TB = new System.Windows.Forms.TextBox();
+            this.CNT1_PN2_Num_TB = new System.Windows.Forms.TextBox();
+            this.CNT1_PN2_Ext_TB = new System.Windows.Forms.TextBox();
+            this.CNT1_PN2_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CustomerNameLabel
@@ -464,16 +467,6 @@
             this.AddContactBtn.UseVisualStyleBackColor = true;
             this.AddContactBtn.Click += new System.EventHandler(this.AddContactBtn_Click);
             // 
-            // AddPN1
-            // 
-            this.AddPN1.Location = new System.Drawing.Point(293, 223);
-            this.AddPN1.Name = "AddPN1";
-            this.AddPN1.Size = new System.Drawing.Size(123, 23);
-            this.AddPN1.TabIndex = 44;
-            this.AddPN1.Text = "Add Phone Number";
-            this.AddPN1.UseVisualStyleBackColor = true;
-            this.AddPN1.Click += new System.EventHandler(this.AddPN1_Click);
-            // 
             // LocationData
             // 
             this.LocationData.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -494,6 +487,40 @@
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
+            // CNT1_PN2_Type_TB
+            // 
+            this.CNT1_PN2_Type_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CNT1_PN2_Type_TB.Location = new System.Drawing.Point(447, 255);
+            this.CNT1_PN2_Type_TB.Name = "CNT1_PN2_Type_TB";
+            this.CNT1_PN2_Type_TB.Size = new System.Drawing.Size(105, 29);
+            this.CNT1_PN2_Type_TB.TabIndex = 47;
+            // 
+            // CNT1_PN2_Num_TB
+            // 
+            this.CNT1_PN2_Num_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CNT1_PN2_Num_TB.Location = new System.Drawing.Point(558, 255);
+            this.CNT1_PN2_Num_TB.Name = "CNT1_PN2_Num_TB";
+            this.CNT1_PN2_Num_TB.Size = new System.Drawing.Size(105, 29);
+            this.CNT1_PN2_Num_TB.TabIndex = 48;
+            // 
+            // CNT1_PN2_Ext_TB
+            // 
+            this.CNT1_PN2_Ext_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CNT1_PN2_Ext_TB.Location = new System.Drawing.Point(669, 255);
+            this.CNT1_PN2_Ext_TB.Name = "CNT1_PN2_Ext_TB";
+            this.CNT1_PN2_Ext_TB.Size = new System.Drawing.Size(105, 29);
+            this.CNT1_PN2_Ext_TB.TabIndex = 49;
+            // 
+            // CNT1_PN2_Label
+            // 
+            this.CNT1_PN2_Label.AutoSize = true;
+            this.CNT1_PN2_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CNT1_PN2_Label.Location = new System.Drawing.Point(422, 258);
+            this.CNT1_PN2_Label.Name = "CNT1_PN2_Label";
+            this.CNT1_PN2_Label.Size = new System.Drawing.Size(19, 21);
+            this.CNT1_PN2_Label.TabIndex = 50;
+            this.CNT1_PN2_Label.Text = "2";
+            // 
             // NewClientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -501,9 +528,12 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(801, 617);
+            this.Controls.Add(this.CNT1_PN2_Label);
+            this.Controls.Add(this.CNT1_PN2_Ext_TB);
+            this.Controls.Add(this.CNT1_PN2_Num_TB);
+            this.Controls.Add(this.CNT1_PN2_Type_TB);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.LocationData);
-            this.Controls.Add(this.AddPN1);
             this.Controls.Add(this.AddContactBtn);
             this.Controls.Add(this.CNT1_PN1_Label);
             this.Controls.Add(this.LocationLabel);
@@ -596,8 +626,11 @@
         private Label LocationLabel;
         private Label CNT1_PN1_Label;
         private Button AddContactBtn;
-        private Button AddPN1;
         public RichTextBox LocationData;
         private Button SaveBtn;
+        public TextBox CNT1_PN2_Type_TB;
+        public TextBox CNT1_PN2_Num_TB;
+        public TextBox CNT1_PN2_Ext_TB;
+        private Label CNT1_PN2_Label;
     }
 }
