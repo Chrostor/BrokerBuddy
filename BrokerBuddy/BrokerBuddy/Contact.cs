@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrokerBuddy
 {
-    internal class Contact
+    public class Contact
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -13,6 +13,8 @@ namespace BrokerBuddy
     public partial class NewClientData : Form
     {
         private int _NumOfContacts = 1;
+        private int _currentID = 0;
+        List<ClientData> _contacts;
 
         public Label ContactListNumber2;
         public TextBox FirstNameData2;
@@ -48,10 +50,14 @@ namespace BrokerBuddy
         public TextBox CNT3_PN2_Num_TB;
         public TextBox CNT3_PN2_Ext_TB;
 
-        public NewClientData()
+        public NewClientData(List<ClientData> CD)
         {
+            _contacts = CD;
+            _currentID = _contacts[_contacts.Count - 1].ID + 1;
             InitializeComponent();
-            
+            IDNumData.Text = _currentID.ToString();
+            FCFSData.Text = "N/A";
+            BAData.Text = "N/A";
         }
 
         private void AddContactBtn_Click(object sender, EventArgs e)
@@ -61,6 +67,57 @@ namespace BrokerBuddy
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            if (CustNameData.Text == "" || BusNameData.Text == "" || LocationData.Text == "") 
+            {
+                Popup PU = new Popup();
+                PU.Show();
+                return;
+            }
+            ClientData NCD = new ClientData();
+            NCD.ID = Convert.ToInt16(IDNumData.Text);
+            NCD.customerName = CustNameData.Text;
+            NCD.businessName = BusNameData.Text;
+            NCD.location = LocationData.Text;
+            NCD.customer = CustCheckBox.Checked;
+            NCD.site = SiteCheckBox.Checked;
+            NCD.FCFS = FCFSData.Text == "Yes" ? true : false;
+            NCD.BA = BAData.Text == "Yes" ? true : false;
+            long CNT1_PN1 = (CNT1_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN1_Num_TB.Text);
+            long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
+            int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
+            int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
+            NCD.contacts = new List<Contact>
+                        {
+                            new Contact
+                            {
+                                FirstName = FirstNameData1.Text,
+                                LastName = LastNameData1.Text,
+                                Title = TitleData1.Text,
+                                Email = EmailData1.Text,
+                                PhoneNumbers = new List<PhoneContacts>
+                                {
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT1_PN1_Num_TB.Text,
+                                        PhoneNumber = CNT1_PN1,
+                                        Ext = CNT1_PN1_E
+                                    },
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT1_PN2_Num_TB.Text,
+                                        PhoneNumber = CNT1_PN2,
+                                        Ext = CNT1_PN2_E
+                                    }
+                                }
+                            }
+                        };
+
+            NCD.notesGeneral = NotesGeneralData.Text;
+            NCD.notesEquipment = NotesEquipmentData.Text;
+            NCD.notesSpecialRequirements = NotesSpecialRequirementsData.Text;
+
+            _contacts.Add(NCD);
+            this.Hide();
             //TODO: Check how many contact numbers
         }
 
@@ -129,7 +186,7 @@ namespace BrokerBuddy
                 int moveDistY = 450;
                 FirstNameData3 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData3", 8);
                 LastNameData3 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData3", 9);
-                ContactListNumber3 = CreateLabel(10, moveDistY + 3, "ContactListNumber3", 20, "2");
+                ContactListNumber3 = CreateLabel(10, moveDistY + 3, "ContactListNumber3", 20, "3");
                 TitleData3 = CreateTextBox(253, moveDistY, 205, 29, "TitleData3", 10);
                 EmailData3 = CreateTextBox(463, moveDistY, 312, 29, "EmailData3", 11);
                 CNT3_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT3_PN_Type_Label", 25, "Type");

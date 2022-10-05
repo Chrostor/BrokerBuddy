@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrokerBuddy
 {
-    internal class PhoneContacts
+    public class PhoneContacts
     {
         public long PhoneNumber { get; set; }
         public int Ext { get; set; }

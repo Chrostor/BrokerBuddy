@@ -187,7 +187,8 @@
             this.FCFSData.FormattingEnabled = true;
             this.FCFSData.Items.AddRange(new object[] {
             "Yes",
-            "No"});
+            "No",
+            "N/A"});
             this.FCFSData.Location = new System.Drawing.Point(706, 46);
             this.FCFSData.Name = "FCFSData";
             this.FCFSData.Size = new System.Drawing.Size(65, 23);
@@ -357,7 +358,8 @@
             this.BAData.FormattingEnabled = true;
             this.BAData.Items.AddRange(new object[] {
             "Yes",
-            "No"});
+            "No",
+            "N/A"});
             this.BAData.Location = new System.Drawing.Point(706, 80);
             this.BAData.Name = "BAData";
             this.BAData.Size = new System.Drawing.Size(65, 23);

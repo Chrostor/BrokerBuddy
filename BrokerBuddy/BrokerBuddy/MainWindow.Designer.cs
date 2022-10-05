@@ -1,6 +1,6 @@
 ﻿namespace BrokerBuddy
 {
-    partial class MainWindow
+    public partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.

@@ -12,15 +12,16 @@ namespace BrokerBuddy
 {
     public partial class SearchResults : Form
     {
-        List<ClientData> sd = SampleData.createSamples();
-        public SearchResults()
+        List<ClientData> _clientData;
+        public SearchResults(List<ClientData> CD)
         {
+            _clientData = CD;
             InitializeComponent();
 
             //var sd = SampleData.createSamples();
             ListView lv = SearchResultView;
             lv.Items.Clear();
-            foreach (var item in sd)
+            foreach (var item in _clientData)
             {
                 var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName };
                 var li = lv.Items.Add(new ListViewItem(row));
@@ -42,7 +43,7 @@ namespace BrokerBuddy
                 //Target gets the ID of the data object
                 var target = int.Parse(SearchResultView.SelectedItems[0].Text);
                 DataWindow dw = new DataWindow();
-                ClientData cd = sd.Find(i => i.ID.Equals(target));
+                ClientData cd = _clientData.Find(i => i.ID.Equals(target));
                 dw.IDNumData.Text = (cd.ID).ToString();
                 dw.CustNameData.Text = cd.customerName;
                 dw.BusNameData.Text = cd.businessName;
@@ -61,6 +62,18 @@ namespace BrokerBuddy
                 dw.CNT1_PN1_Type_TB.Text = (cd.contacts[0].PhoneNumbers[0].NumberType).ToString();
                 dw.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString(); 
                 dw.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext).ToString() == "0" ? "None" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+                
+/*                foreach (Control c in dw.Controls) 
+                {
+                    if (c is not CheckBox) 
+                    {
+                        if (c.Text == "" || c.Text.ToString() == "0") 
+                        {
+                            c.Hide();
+                        }
+                    }
+                }*/
+
                 dw.Show();
             }
             catch (Exception)

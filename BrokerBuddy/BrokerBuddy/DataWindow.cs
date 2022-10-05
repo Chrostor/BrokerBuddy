@@ -15,6 +15,16 @@ namespace BrokerBuddy
         public DataWindow()
         {
             InitializeComponent();
+            foreach (Control c in this.Controls) 
+            {
+                if (c is not CheckBox) 
+                {
+                    if (c.Text == "") 
+                    {
+                        //c.Hide();
+                    }
+                }
+            }
         }
 
         private void EditContactBTN_Click(object sender, EventArgs e)

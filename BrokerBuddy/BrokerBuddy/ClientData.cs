@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrokerBuddy
 {
-    internal class ClientData
+    public class ClientData
     {
         public int ID { get; set; }
         public bool customer { get; set; }
