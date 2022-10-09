@@ -495,7 +495,7 @@
             this.Delete_BTN.Name = "Delete_BTN";
             this.Delete_BTN.Size = new System.Drawing.Size(111, 61);
             this.Delete_BTN.TabIndex = 45;
-            this.Delete_BTN.Text = "Delete Contact (TODO)";
+            this.Delete_BTN.Text = "Delete Contact";
             this.Delete_BTN.UseVisualStyleBackColor = true;
             this.Delete_BTN.Click += new System.EventHandler(this.Delete_BTN_Click);
             // 

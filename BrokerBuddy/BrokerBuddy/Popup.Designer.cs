@@ -73,7 +73,7 @@
 
         #endregion
 
-        private Button button1;
-        private Label ErrorLabel;
+        public Button button1;
+        public Label ErrorLabel;
     }
 }

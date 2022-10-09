@@ -21,7 +21,7 @@ namespace BrokerBuddy
                 customerName = "Big Ricks",
                 businessName = "None",
                 location = "Fort Worth, Texas",
-                contacts = new List<Contact> 
+                contacts = new List<Contact>
                 {
                     new Contact
                     {
@@ -30,11 +30,62 @@ namespace BrokerBuddy
                         Email = "bigrick@bigricks.com",
                         Title = "Da Boss",
                         PhoneNumbers = new List<PhoneContacts>
-                        { 
+                        {
                             new PhoneContacts
                             {
                                 PhoneNumber = 8175468795,
-                                NumberType = "Cell"
+                                NumberType = "Cell",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            }
+                        }
+                    },
+                    new Contact
+                    {
+                        FirstName = "",
+                        LastName = "",
+                        Email = "",
+                        Title = "",
+                        PhoneNumbers = new List<PhoneContacts>
+                        {
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            }
+                        }
+                    },
+                    new Contact
+                    {
+                        FirstName = "",
+                        LastName = "",
+                        Email = "",
+                        Title = "",
+                        PhoneNumbers = new List<PhoneContacts>
+                        {
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
                             }
                         }
                     }
@@ -68,6 +119,12 @@ namespace BrokerBuddy
                                 PhoneNumber = 6825468792,
                                 NumberType = "Office",
                                 Ext = 3084
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
                             }
                         }
                     },
@@ -83,6 +140,34 @@ namespace BrokerBuddy
                             {
                                 PhoneNumber = 6828574652,
                                 NumberType = "Office"
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            }
+                        }
+                    },
+                    new Contact
+                    {
+                        FirstName = "",
+                        LastName = "",
+                        Email = "",
+                        Title = "",
+                        PhoneNumbers = new List<PhoneContacts>
+                        {
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
                             }
                         }
                     }
@@ -114,12 +199,58 @@ namespace BrokerBuddy
                             new PhoneContacts
                             {
                                 PhoneNumber = 7928416481,
-                                NumberType = "Work"
+                                NumberType = "Work",
+                                Ext = 0
                             },
                             new PhoneContacts
                             {
                                 PhoneNumber = 7921597582,
-                                NumberType = "Cell"
+                                NumberType = "Cell",
+                                Ext = 0
+                            }
+                        }
+                    },
+                    new Contact
+                    {
+                        FirstName = "Bill",
+                        LastName = "Snyde",
+                        Email = "bsnyde@cageneman.com",
+                        Title = "Dock Supervisor",
+                        PhoneNumbers = new List<PhoneContacts>
+                        {
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 5221348547,
+                                NumberType = "Cell",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
+                            }
+                        }
+                    },
+                    new Contact
+                    {
+                        FirstName = "Joques",
+                        LastName = "Coulliby",
+                        Email = "jcoulliby@cageneman.com",
+                        Title = "Asst Dock Supervisor",
+                        PhoneNumbers = new List<PhoneContacts>
+                        {
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 8176882248,
+                                NumberType = "Cell",
+                                Ext = 0
+                            },
+                            new PhoneContacts
+                            {
+                                PhoneNumber = 0,
+                                NumberType = "",
+                                Ext = 0
                             }
                         }
                     }

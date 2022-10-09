@@ -81,7 +81,7 @@
 
         #endregion
 
-        private ListView SearchResultView;
+        public ListView SearchResultView;
         private ColumnHeader col_ID;
         private ColumnHeader col_Name;
         private ColumnHeader col_BusName;

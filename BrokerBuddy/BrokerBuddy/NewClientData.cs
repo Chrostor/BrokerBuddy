@@ -32,7 +32,6 @@ namespace BrokerBuddy
         public TextBox CNT2_PN2_Type_TB;
         public TextBox CNT2_PN2_Num_TB;
         public TextBox CNT2_PN2_Ext_TB;
-
         public Label ContactListNumber3;
         public TextBox FirstNameData3;
         public TextBox LastNameData3;
