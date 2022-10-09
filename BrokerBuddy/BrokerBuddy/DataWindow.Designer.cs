@@ -71,7 +71,7 @@
             this.CNT1_PN1_Label = new System.Windows.Forms.Label();
             this.EditContactBTN = new System.Windows.Forms.Button();
             this.LocationData = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Delete_BTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CustomerNameLabel
@@ -489,14 +489,15 @@
             this.LocationData.TabIndex = 4;
             this.LocationData.Text = "";
             // 
-            // button1
+            // Delete_BTN
             // 
-            this.button1.Location = new System.Drawing.Point(422, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 61);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Delete Contact (TODO)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Delete_BTN.Location = new System.Drawing.Point(422, 72);
+            this.Delete_BTN.Name = "Delete_BTN";
+            this.Delete_BTN.Size = new System.Drawing.Size(111, 61);
+            this.Delete_BTN.TabIndex = 45;
+            this.Delete_BTN.Text = "Delete Contact (TODO)";
+            this.Delete_BTN.UseVisualStyleBackColor = true;
+            this.Delete_BTN.Click += new System.EventHandler(this.Delete_BTN_Click);
             // 
             // DataWindow
             // 
@@ -505,7 +506,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(801, 617);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Delete_BTN);
             this.Controls.Add(this.LocationData);
             this.Controls.Add(this.EditContactBTN);
             this.Controls.Add(this.CNT1_PN1_Label);
@@ -600,6 +601,6 @@
         private Label CNT1_PN1_Label;
         private Button EditContactBTN;
         public RichTextBox LocationData;
-        private Button button1;
+        private Button Delete_BTN;
     }
 }

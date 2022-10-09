@@ -38,7 +38,7 @@ namespace BrokerBuddy
         private void SearchResultView_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   
                 //var sd = SampleData.createSamples();
                 //Target gets the ID of the data object
                 var target = int.Parse(SearchResultView.SelectedItems[0].Text);
@@ -62,18 +62,7 @@ namespace BrokerBuddy
                 dw.CNT1_PN1_Type_TB.Text = (cd.contacts[0].PhoneNumbers[0].NumberType).ToString();
                 dw.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString(); 
                 dw.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext).ToString() == "0" ? "None" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
-                
-/*                foreach (Control c in dw.Controls) 
-                {
-                    if (c is not CheckBox) 
-                    {
-                        if (c.Text == "" || c.Text.ToString() == "0") 
-                        {
-                            c.Hide();
-                        }
-                    }
-                }*/
-
+                dw.ClientData = cd;
                 dw.Show();
             }
             catch (Exception)

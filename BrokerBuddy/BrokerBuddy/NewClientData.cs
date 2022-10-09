@@ -86,8 +86,17 @@ namespace BrokerBuddy
             long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
             int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
             int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
+            long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text);
+            long CNT2_PN2 = (CNT2_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN2_Num_TB.Text);
+            int CNT2_PN1_E = (CNT2_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN1_Ext_TB.Text);
+            int CNT2_PN2_E = (CNT2_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN2_Ext_TB.Text);
+            long CNT3_PN1 = (CNT3_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN1_Num_TB.Text);
+            long CNT3_PN2 = (CNT3_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN2_Num_TB.Text);
+            int CNT3_PN1_E = (CNT3_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN1_Ext_TB.Text);
+            int CNT3_PN2_E = (CNT3_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN2_Ext_TB.Text);
             NCD.contacts = new List<Contact>
                         {
+                            //Contact 1
                             new Contact
                             {
                                 FirstName = FirstNameData1.Text,
@@ -98,15 +107,61 @@ namespace BrokerBuddy
                                 {
                                     new PhoneContacts
                                     {
-                                        NumberType = CNT1_PN1_Num_TB.Text,
+                                        NumberType = CNT1_PN1_Type_TB.Text,
                                         PhoneNumber = CNT1_PN1,
                                         Ext = CNT1_PN1_E
                                     },
                                     new PhoneContacts
                                     {
-                                        NumberType = CNT1_PN2_Num_TB.Text,
+                                        NumberType = CNT1_PN2_Type_TB.Text,
                                         PhoneNumber = CNT1_PN2,
                                         Ext = CNT1_PN2_E
+                                    }
+                                }
+                            },
+                            // Contact 2
+                            new Contact
+                            {
+                                FirstName = FirstNameData2.Text,
+                                LastName = LastNameData2.Text,
+                                Title = TitleData2.Text,
+                                Email = EmailData2.Text,
+                                PhoneNumbers = new List<PhoneContacts>
+                                {
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT2_PN1_Type_TB.Text,
+                                        PhoneNumber = CNT2_PN1,
+                                        Ext = CNT2_PN1_E
+                                    },
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT2_PN2_Type_TB.Text,
+                                        PhoneNumber = CNT2_PN2,
+                                        Ext = CNT2_PN2_E
+                                    }
+                                }
+                            },
+                            //Contact 3
+                            new Contact
+                            {
+                                FirstName = FirstNameData3.Text,
+                                LastName = LastNameData3.Text,
+                                Title = TitleData3.Text,
+                                Email = EmailData3.Text,
+                                PhoneNumbers = new List<PhoneContacts>
+                                {
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT3_PN1_Type_TB.Text,
+                                        PhoneNumber = CNT3_PN1,
+                                        Ext = CNT3_PN1_E
+                                    },
+                                    new PhoneContacts
+                                    {
+                                        NumberType = CNT3_PN2_Type_TB.Text,
+                                        PhoneNumber = CNT3_PN2,
+                                        Ext = CNT3_PN2_E
                                     }
                                 }
                             }

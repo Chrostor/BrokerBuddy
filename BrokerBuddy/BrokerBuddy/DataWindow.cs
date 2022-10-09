@@ -12,22 +12,21 @@ namespace BrokerBuddy
 {
     public partial class DataWindow : Form
     {
+        public int ID;
+        public ClientData ClientData;
+
         public DataWindow()
         {
             InitializeComponent();
-            foreach (Control c in this.Controls) 
-            {
-                if (c is not CheckBox) 
-                {
-                    if (c.Text == "") 
-                    {
-                        //c.Hide();
-                    }
-                }
-            }
+            
         }
 
         private void EditContactBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Delete_BTN_Click(object sender, EventArgs e)
         {
 
         }
