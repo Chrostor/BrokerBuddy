@@ -139,7 +139,8 @@ namespace BrokerBuddy
                             new PhoneContacts
                             {
                                 PhoneNumber = 6828574652,
-                                NumberType = "Office"
+                                NumberType = "Office",
+                                Ext = 0
                             },
                             new PhoneContacts
                             {

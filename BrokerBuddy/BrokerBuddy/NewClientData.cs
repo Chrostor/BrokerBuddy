@@ -15,40 +15,44 @@ namespace BrokerBuddy
         private int _NumOfContacts = 1;
         private int _currentID = 0;
         List<ClientData> _contacts;
+        ClientData Client;
+        private bool _editClient = false;
+        SearchResults SR;
 
         public Label ContactListNumber2;
-        public TextBox FirstNameData2;
-        public TextBox LastNameData2;
-        public TextBox TitleData2;
-        public TextBox EmailData2;
+        public TextBox FirstNameData2 = new TextBox();
+        public TextBox LastNameData2 = new TextBox();
+        public TextBox TitleData2 = new TextBox();
+        public TextBox EmailData2 = new TextBox();
         public Label CNT2_PN_Type_Label; 
         public Label CNT2_Number_Label;
         public Label CNT2_Ext_Label;
         public Label CNT2_PN1_Label;
         public Label CNT2_PN2_Label;
-        public TextBox CNT2_PN1_Type_TB;
-        public TextBox CNT2_PN1_Num_TB;
-        public TextBox CNT2_PN1_Ext_TB;
-        public TextBox CNT2_PN2_Type_TB;
-        public TextBox CNT2_PN2_Num_TB;
-        public TextBox CNT2_PN2_Ext_TB;
+        public TextBox CNT2_PN1_Type_TB = new TextBox();
+        public TextBox CNT2_PN1_Num_TB = new TextBox();
+        public TextBox CNT2_PN1_Ext_TB = new TextBox();
+        public TextBox CNT2_PN2_Type_TB = new TextBox();
+        public TextBox CNT2_PN2_Num_TB = new TextBox();
+        public TextBox CNT2_PN2_Ext_TB = new TextBox();
         public Label ContactListNumber3;
-        public TextBox FirstNameData3;
-        public TextBox LastNameData3;
-        public TextBox TitleData3;
-        public TextBox EmailData3;
+        public TextBox FirstNameData3 = new TextBox();
+        public TextBox LastNameData3 = new TextBox();
+        public TextBox TitleData3 = new TextBox();
+        public TextBox EmailData3 = new TextBox();
         public Label CNT3_PN_Type_Label;
         public Label CNT3_Number_Label;
         public Label CNT3_Ext_Label;
         public Label CNT3_PN1_Label;
         public Label CNT3_PN2_Label;
-        public TextBox CNT3_PN1_Type_TB;
-        public TextBox CNT3_PN1_Num_TB;
-        public TextBox CNT3_PN1_Ext_TB;
-        public TextBox CNT3_PN2_Type_TB;
-        public TextBox CNT3_PN2_Num_TB;
-        public TextBox CNT3_PN2_Ext_TB;
+        public TextBox CNT3_PN1_Type_TB = new TextBox();
+        public TextBox CNT3_PN1_Num_TB = new TextBox();
+        public TextBox CNT3_PN1_Ext_TB = new TextBox();
+        public TextBox CNT3_PN2_Type_TB = new TextBox();
+        public TextBox CNT3_PN2_Num_TB = new TextBox();
+        public TextBox CNT3_PN2_Ext_TB = new TextBox();
 
+        //Fresh new addition
         public NewClientData(List<ClientData> CD)
         {
             _contacts = CD;
@@ -57,6 +61,41 @@ namespace BrokerBuddy
             IDNumData.Text = _currentID.ToString();
             FCFSData.Text = "N/A";
             BAData.Text = "N/A";
+        }
+
+        //Edit existing data
+        public NewClientData(List<ClientData> CD, ClientData client, SearchResults sr) 
+        {
+            _contacts = CD;
+            Client = client;
+            _editClient = true;
+            SR = sr;
+            InitializeComponent();
+            //Check for number of contacts, expand window as needed
+            if (client.contacts[1].FirstName == "" && client.contacts[2].FirstName == "")
+            {
+                FillDataWindowsContact1(client);
+            }
+            else if (client.contacts[1].FirstName != "" && client.contacts[2].FirstName == "")
+            {
+                //Show second contact data
+                AddContact();
+                FillDataWindowsContact1(client);
+                FillDataWindowsContact2(client);
+            }
+            else if (client.contacts[1].FirstName != "" && client.contacts[2].FirstName != "")
+            {
+                //Show second and third contact data
+                AddContact();
+                AddContact();
+                FillDataWindowsContact1(client);
+                FillDataWindowsContact2(client);
+                FillDataWindowsContact3(client);
+            }
+            //Fill all data windows
+            
+
+            this.Show();
         }
 
         private void AddContactBtn_Click(object sender, EventArgs e)
@@ -85,7 +124,7 @@ namespace BrokerBuddy
             long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
             int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
             int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
-            long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text);
+            long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text); 
             long CNT2_PN2 = (CNT2_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN2_Num_TB.Text);
             int CNT2_PN1_E = (CNT2_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN1_Ext_TB.Text);
             int CNT2_PN2_E = (CNT2_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN2_Ext_TB.Text);
@@ -170,9 +209,33 @@ namespace BrokerBuddy
             NCD.notesEquipment = NotesEquipmentData.Text;
             NCD.notesSpecialRequirements = NotesSpecialRequirementsData.Text;
 
-            _contacts.Add(NCD);
+            if (_editClient)
+            {
+                var contactIndex = _contacts.IndexOf(_contacts.Find(i => i.ID.Equals(NCD.ID)));
+                _contacts.RemoveAt(contactIndex);
+                _contacts.Insert(contactIndex, NCD);
+                RefreshSearchResults();
+            }
+            else 
+            {
+                _contacts.Add(NCD);
+            }
+
             this.Hide();
             //TODO: Check how many contact numbers
+        }
+
+        public void RefreshSearchResults()
+        {
+            
+            ListView lv = SR.SearchResultView;
+            lv.Items.Clear();
+            foreach (var item in _contacts)
+            {
+                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName };
+                var li = lv.Items.Add(new ListViewItem(row));
+            }
+            
         }
 
         private void AddContact() 
@@ -291,5 +354,59 @@ namespace BrokerBuddy
             };
             return TB;
         }
+
+        private void FillDataWindowsContact1(ClientData cd) 
+        {
+            IDNumData.Text = (cd.ID).ToString();
+            CustNameData.Text = cd.customerName;
+            BusNameData.Text = cd.businessName;
+            LocationData.Text = cd.location;
+            CustCheckBox.Checked = cd.customer ? true : false;
+            SiteCheckBox.Checked = cd.site ? true : false;
+            FCFSData.Text = cd.FCFS ? "Yes" : "No";
+            BAData.Text = cd.BA ? "Yes" : "No";
+            NotesGeneralData.Text = cd.notesGeneral;
+            NotesEquipmentData.Text = cd.notesEquipment;
+            NotesSpecialRequirementsData.Text = cd.notesSpecialRequirements;
+            
+            FirstNameData1.Text = cd.contacts[0].FirstName;
+            LastNameData1.Text = cd.contacts[0].LastName;
+            EmailData1.Text = cd.contacts[0].Email;
+            TitleData1.Text = cd.contacts[0].Title;
+            CNT1_PN1_Type_TB.Text = (cd.contacts[0].PhoneNumbers[0].NumberType).ToString();
+            CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString();
+            CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext).ToString() == "0" ? "" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+        }
+
+        private void FillDataWindowsContact2(ClientData cd) 
+        {
+            FirstNameData2.Text = cd.contacts[1].FirstName;
+            LastNameData2.Text = cd.contacts[1].LastName;
+            TitleData2.Text = cd.contacts[1].Title;
+            EmailData2.Text = cd.contacts[1].Email;
+
+            CNT2_PN1_Type_TB.Text = cd.contacts[1].PhoneNumbers[0].NumberType;
+            CNT2_PN1_Num_TB.Text = (cd.contacts[1].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].PhoneNumber).ToString();
+            CNT2_PN1_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].Ext).ToString();
+            CNT2_PN2_Type_TB.Text = cd.contacts[1].PhoneNumbers[1].NumberType;
+            CNT2_PN2_Num_TB.Text = (cd.contacts[1].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].PhoneNumber).ToString();
+            CNT2_PN2_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].Ext).ToString();
+        }
+
+        private void FillDataWindowsContact3(ClientData cd)
+        {
+            FirstNameData3.Text = cd.contacts[2].FirstName;
+            LastNameData3.Text = cd.contacts[2].LastName;
+            TitleData3.Text = cd.contacts[2].Title;
+            EmailData3.Text = cd.contacts[2].Email;
+
+            CNT3_PN1_Type_TB.Text = cd.contacts[2].PhoneNumbers[0].NumberType;
+            CNT3_PN1_Num_TB.Text = (cd.contacts[2].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].PhoneNumber).ToString();
+            CNT3_PN1_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].Ext).ToString();
+            CNT3_PN2_Type_TB.Text = cd.contacts[2].PhoneNumbers[1].NumberType;
+            CNT3_PN2_Num_TB.Text = (cd.contacts[2].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].PhoneNumber).ToString();
+            CNT3_PN2_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].Ext).ToString();
+        }
+
     }
 }

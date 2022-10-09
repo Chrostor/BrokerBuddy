@@ -17,6 +17,7 @@ namespace BrokerBuddy
         public List<ClientData> data;
         public SearchResults sr;
 
+
         public Label ContactListNumber2;
         public TextBox FirstNameData2;
         public TextBox LastNameData2;
@@ -70,9 +71,12 @@ namespace BrokerBuddy
             this.LastNameData1.Text = cd.contacts[0].LastName;
             this.EmailData1.Text = cd.contacts[0].Email;
             this.TitleData1.Text = cd.contacts[0].Title;
-            this.CNT1_PN1_Type_TB.Text = (cd.contacts[0].PhoneNumbers[0].NumberType).ToString();
-            this.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString();
-            this.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext).ToString() == "0" ? "None" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+            this.CNT1_PN1_Type_TB.Text = cd.contacts[0].PhoneNumbers[0].NumberType;
+            this.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString();
+            this.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+            this.CNT1_PN2_Type_TB.Text = cd.contacts[0].PhoneNumbers[1].NumberType;
+            this.CNT1_PN2_Num_TB.Text = (cd.contacts[0].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[0].PhoneNumbers[1].PhoneNumber).ToString();
+            this.CNT1_PN2_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[0].PhoneNumbers[1].Ext).ToString();
             if (cd.contacts[1].FirstName == "" && cd.contacts[2].FirstName == "")
             {
 
@@ -100,7 +104,8 @@ namespace BrokerBuddy
 
         private void EditContactBTN_Click(object sender, EventArgs e)
         {
-            //TODO
+            NewClientData NCD = new NewClientData(data, cd, sr);
+            this.Close();
         }
 
         private void Delete_BTN_Click(object sender, EventArgs e)
@@ -165,7 +170,7 @@ namespace BrokerBuddy
 
         private void createLabels1Contact() 
         {
-            int moveDistY = 270;
+            int moveDistY = 300;
             FirstNameData2 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData2", 8);
             LastNameData2 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData2", 9);
             ContactListNumber2 = CreateLabel(10, moveDistY + 3, "ContactListNumber2", 20, "2");
@@ -204,7 +209,7 @@ namespace BrokerBuddy
 
         private void createLabels2Contact() 
         {
-            int moveDistY = 420;
+            int moveDistY = 440;
             FirstNameData3 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData3", 8);
             LastNameData3 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData3", 9);
             ContactListNumber3 = CreateLabel(10, moveDistY + 3, "ContactListNumber3", 20, "3");
