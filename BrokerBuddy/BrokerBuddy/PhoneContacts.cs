@@ -8,8 +8,8 @@ namespace BrokerBuddy
 {
     public class PhoneContacts
     {
-        public long PhoneNumber { get; set; }
-        public int Ext { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Ext { get; set; }
         public string NumberType { get; set; }
         
     }

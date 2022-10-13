@@ -31,6 +31,7 @@ namespace BrokerBuddy
         {
             string jsonString = JsonSerializer.Serialize(conts);
             File.WriteAllText(FileNameJSON, jsonString);
+            
         }
 
         //public void saveContacts(List<Contact> contacts)

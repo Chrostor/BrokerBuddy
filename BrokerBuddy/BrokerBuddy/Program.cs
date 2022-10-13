@@ -11,7 +11,8 @@ namespace BrokerBuddy
             FileHandler.JSONFileCheck();
             //TODO: Sample data for now.  Goal is to load from file
             var clientData = FileHandler.LoadContactsJSON();
-            //FileHandler.SaveContactsJSON(sampleData);
+            //var clientData = SampleData.createSamples();
+            //FileHandler.SaveContactsJSON(clientData);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

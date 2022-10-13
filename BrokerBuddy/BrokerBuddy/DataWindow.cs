@@ -72,11 +72,11 @@ namespace BrokerBuddy
             this.EmailData1.Text = cd.contacts[0].Email;
             this.TitleData1.Text = cd.contacts[0].Title;
             this.CNT1_PN1_Type_TB.Text = cd.contacts[0].PhoneNumbers[0].NumberType;
-            this.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString();
-            this.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+            this.CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber == "") ? "" : cd.contacts[0].PhoneNumbers[0].PhoneNumber;
+            this.CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext == "") ? "" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
             this.CNT1_PN2_Type_TB.Text = cd.contacts[0].PhoneNumbers[1].NumberType;
-            this.CNT1_PN2_Num_TB.Text = (cd.contacts[0].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[0].PhoneNumbers[1].PhoneNumber).ToString();
-            this.CNT1_PN2_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[0].PhoneNumbers[1].Ext).ToString();
+            this.CNT1_PN2_Num_TB.Text = (cd.contacts[0].PhoneNumbers[1].PhoneNumber == "") ? "" : cd.contacts[0].PhoneNumbers[1].PhoneNumber;
+            this.CNT1_PN2_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[1].Ext == "") ? "" : cd.contacts[0].PhoneNumbers[1].Ext;
             if (cd.contacts[1].FirstName == "" && cd.contacts[2].FirstName == "")
             {
 
@@ -194,11 +194,11 @@ namespace BrokerBuddy
             EmailData2.Text = cd.contacts[1].Email;
 
             CNT2_PN1_Type_TB.Text = cd.contacts[1].PhoneNumbers[0].NumberType;
-            CNT2_PN1_Num_TB.Text = (cd.contacts[1].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].PhoneNumber).ToString();
-            CNT2_PN1_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].Ext).ToString();
+            CNT2_PN1_Num_TB.Text = cd.contacts[1].PhoneNumbers[0].PhoneNumber;
+            CNT2_PN1_Ext_TB.Text = cd.contacts[1].PhoneNumbers[0].Ext;
             CNT2_PN2_Type_TB.Text = cd.contacts[1].PhoneNumbers[1].NumberType;
-            CNT2_PN2_Num_TB.Text = (cd.contacts[1].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].PhoneNumber).ToString();
-            CNT2_PN2_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].Ext).ToString();
+            CNT2_PN2_Num_TB.Text = cd.contacts[1].PhoneNumbers[1].PhoneNumber;
+            CNT2_PN2_Ext_TB.Text = cd.contacts[1].PhoneNumbers[1].Ext;
 
             this.Controls.AddRange(new Control[] {
                     FirstNameData2, LastNameData2, ContactListNumber2, TitleData2, EmailData2,
@@ -233,11 +233,11 @@ namespace BrokerBuddy
             EmailData3.Text = cd.contacts[2].Email;
 
             CNT3_PN1_Type_TB.Text = cd.contacts[2].PhoneNumbers[0].NumberType;
-            CNT3_PN1_Num_TB.Text = (cd.contacts[2].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].PhoneNumber).ToString();
-            CNT3_PN1_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].Ext).ToString();
+            CNT3_PN1_Num_TB.Text = cd.contacts[2].PhoneNumbers[0].PhoneNumber;
+            CNT3_PN1_Ext_TB.Text = cd.contacts[2].PhoneNumbers[0].Ext;
             CNT3_PN2_Type_TB.Text = cd.contacts[2].PhoneNumbers[1].NumberType;
-            CNT3_PN2_Num_TB.Text = (cd.contacts[2].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].PhoneNumber).ToString();
-            CNT3_PN2_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].Ext).ToString();
+            CNT3_PN2_Num_TB.Text = cd.contacts[2].PhoneNumbers[1].PhoneNumber;
+            CNT3_PN2_Ext_TB.Text = cd.contacts[2].PhoneNumbers[1].Ext;
 
             this.Controls.AddRange(new Control[] {
                     FirstNameData3, LastNameData3, ContactListNumber3, TitleData3, EmailData3,

@@ -75,8 +75,39 @@ namespace BrokerBuddy
 
         }
 
+        private void custNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            keyDownHandler(e);
+        }
 
+        private void keyDownHandler(KeyEventArgs e) 
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                Search_Click(null, null);
+            }
+        }
 
+        private void busNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            keyDownHandler(e);
+        }
 
+        private void conFirstNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            keyDownHandler(e);
+        }
+
+        private void conLastNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            keyDownHandler(e);
+        }
+
+        private void busLocationBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            keyDownHandler(e);
+        }
     }
 }

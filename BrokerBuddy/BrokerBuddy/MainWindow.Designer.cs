@@ -62,7 +62,7 @@
             this.Search.Location = new System.Drawing.Point(12, 9);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(120, 61);
-            this.Search.TabIndex = 1;
+            this.Search.TabIndex = 6;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -73,7 +73,7 @@
             this.ListAll.Location = new System.Drawing.Point(632, 9);
             this.ListAll.Name = "ListAll";
             this.ListAll.Size = new System.Drawing.Size(75, 61);
-            this.ListAll.TabIndex = 2;
+            this.ListAll.TabIndex = 7;
             this.ListAll.Text = "List All";
             this.ListAll.UseVisualStyleBackColor = true;
             this.ListAll.Click += new System.EventHandler(this.ListAll_Click);
@@ -84,7 +84,7 @@
             this.Add.Location = new System.Drawing.Point(713, 9);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 61);
-            this.Add.TabIndex = 3;
+            this.Add.TabIndex = 8;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -96,6 +96,7 @@
             this.custNameBox.Size = new System.Drawing.Size(120, 23);
             this.custNameBox.TabIndex = 1;
             this.custNameBox.TextChanged += new System.EventHandler(this.custNameBox_TextChanged);
+            this.custNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.custNameBox_KeyDown);
             // 
             // busNameBox
             // 
@@ -104,6 +105,7 @@
             this.busNameBox.Size = new System.Drawing.Size(120, 23);
             this.busNameBox.TabIndex = 2;
             this.busNameBox.TextChanged += new System.EventHandler(this.busNameBox_TextChanged);
+            this.busNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.busNameBox_KeyDown);
             // 
             // conFirstNameBox
             // 
@@ -111,6 +113,7 @@
             this.conFirstNameBox.Name = "conFirstNameBox";
             this.conFirstNameBox.Size = new System.Drawing.Size(120, 23);
             this.conFirstNameBox.TabIndex = 3;
+            this.conFirstNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conFirstNameBox_KeyDown);
             // 
             // label1
             // 
@@ -148,6 +151,7 @@
             this.conLastNameBox.Name = "conLastNameBox";
             this.conLastNameBox.Size = new System.Drawing.Size(120, 23);
             this.conLastNameBox.TabIndex = 4;
+            this.conLastNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.conLastNameBox_KeyDown);
             // 
             // label4
             // 
@@ -165,6 +169,7 @@
             this.busLocationBox.Name = "busLocationBox";
             this.busLocationBox.Size = new System.Drawing.Size(120, 23);
             this.busLocationBox.TabIndex = 5;
+            this.busLocationBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.busLocationBox_KeyDown);
             // 
             // label5
             // 

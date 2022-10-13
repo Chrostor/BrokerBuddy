@@ -120,18 +120,20 @@ namespace BrokerBuddy
             NCD.site = SiteCheckBox.Checked;
             NCD.FCFS = FCFSData.Text == "Yes" ? true : false;
             NCD.BA = BAData.Text == "Yes" ? true : false;
-            long CNT1_PN1 = (CNT1_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN1_Num_TB.Text);
-            long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
-            int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
-            int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
-            long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text); 
-            long CNT2_PN2 = (CNT2_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN2_Num_TB.Text);
-            int CNT2_PN1_E = (CNT2_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN1_Ext_TB.Text);
-            int CNT2_PN2_E = (CNT2_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN2_Ext_TB.Text);
-            long CNT3_PN1 = (CNT3_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN1_Num_TB.Text);
-            long CNT3_PN2 = (CNT3_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN2_Num_TB.Text);
-            int CNT3_PN1_E = (CNT3_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN1_Ext_TB.Text);
-            int CNT3_PN2_E = (CNT3_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN2_Ext_TB.Text);
+            //long CNT1_PN1 = (CNT1_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN1_Num_TB.Text);
+            //long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
+            //int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
+            //int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
+            
+            //long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text); 
+            //long CNT2_PN2 = (CNT2_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN2_Num_TB.Text);
+            //int CNT2_PN1_E = (CNT2_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN1_Ext_TB.Text);
+            //int CNT2_PN2_E = (CNT2_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN2_Ext_TB.Text);
+            
+            //long CNT3_PN1 = (CNT3_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN1_Num_TB.Text);
+            //long CNT3_PN2 = (CNT3_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN2_Num_TB.Text);
+            //int CNT3_PN1_E = (CNT3_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN1_Ext_TB.Text);
+            //int CNT3_PN2_E = (CNT3_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN2_Ext_TB.Text);
             NCD.contacts = new List<Contact>
                         {
                             //Contact 1
@@ -146,14 +148,14 @@ namespace BrokerBuddy
                                     new PhoneContacts
                                     {
                                         NumberType = CNT1_PN1_Type_TB.Text,
-                                        PhoneNumber = CNT1_PN1,
-                                        Ext = CNT1_PN1_E
+                                        PhoneNumber = CNT1_PN1_Num_TB.Text,
+                                        Ext = CNT1_PN1_Ext_TB.Text
                                     },
                                     new PhoneContacts
                                     {
                                         NumberType = CNT1_PN2_Type_TB.Text,
-                                        PhoneNumber = CNT1_PN2,
-                                        Ext = CNT1_PN2_E
+                                        PhoneNumber = CNT1_PN2_Num_TB.Text,
+                                        Ext = CNT1_PN2_Ext_TB.Text
                                     }
                                 }
                             },
@@ -169,14 +171,14 @@ namespace BrokerBuddy
                                     new PhoneContacts
                                     {
                                         NumberType = CNT2_PN1_Type_TB.Text,
-                                        PhoneNumber = CNT2_PN1,
-                                        Ext = CNT2_PN1_E
+                                        PhoneNumber = CNT2_PN1_Num_TB.Text,
+                                        Ext = CNT2_PN1_Ext_TB.Text
                                     },
                                     new PhoneContacts
                                     {
                                         NumberType = CNT2_PN2_Type_TB.Text,
-                                        PhoneNumber = CNT2_PN2,
-                                        Ext = CNT2_PN2_E
+                                        PhoneNumber = CNT2_PN2_Num_TB.Text,
+                                        Ext = CNT2_PN2_Ext_TB.Text
                                     }
                                 }
                             },
@@ -192,14 +194,14 @@ namespace BrokerBuddy
                                     new PhoneContacts
                                     {
                                         NumberType = CNT3_PN1_Type_TB.Text,
-                                        PhoneNumber = CNT3_PN1,
-                                        Ext = CNT3_PN1_E
+                                        PhoneNumber = CNT3_PN1_Num_TB.Text,
+                                        Ext = CNT3_PN1_Ext_TB.Text
                                     },
                                     new PhoneContacts
                                     {
                                         NumberType = CNT3_PN2_Type_TB.Text,
-                                        PhoneNumber = CNT3_PN2,
-                                        Ext = CNT3_PN2_E
+                                        PhoneNumber = CNT3_PN2_Num_TB.Text,
+                                        Ext = CNT3_PN2_Ext_TB.Text
                                     }
                                 }
                             }
@@ -385,11 +387,11 @@ namespace BrokerBuddy
             EmailData2.Text = cd.contacts[1].Email;
 
             CNT2_PN1_Type_TB.Text = cd.contacts[1].PhoneNumbers[0].NumberType;
-            CNT2_PN1_Num_TB.Text = (cd.contacts[1].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].PhoneNumber).ToString();
-            CNT2_PN1_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[0].Ext).ToString();
+            CNT2_PN1_Num_TB.Text = cd.contacts[1].PhoneNumbers[0].PhoneNumber;
+            CNT2_PN1_Ext_TB.Text = cd.contacts[1].PhoneNumbers[0].Ext;
             CNT2_PN2_Type_TB.Text = cd.contacts[1].PhoneNumbers[1].NumberType;
-            CNT2_PN2_Num_TB.Text = (cd.contacts[1].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].PhoneNumber).ToString();
-            CNT2_PN2_Ext_TB.Text = (cd.contacts[1].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[1].PhoneNumbers[1].Ext).ToString();
+            CNT2_PN2_Num_TB.Text = cd.contacts[1].PhoneNumbers[1].PhoneNumber;
+            CNT2_PN2_Ext_TB.Text = cd.contacts[1].PhoneNumbers[1].Ext;
         }
 
         private void FillDataWindowsContact3(ClientData cd)
@@ -400,11 +402,11 @@ namespace BrokerBuddy
             EmailData3.Text = cd.contacts[2].Email;
 
             CNT3_PN1_Type_TB.Text = cd.contacts[2].PhoneNumbers[0].NumberType;
-            CNT3_PN1_Num_TB.Text = (cd.contacts[2].PhoneNumbers[0].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].PhoneNumber).ToString();
-            CNT3_PN1_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[0].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[0].Ext).ToString();
+            CNT3_PN1_Num_TB.Text = cd.contacts[2].PhoneNumbers[0].PhoneNumber;
+            CNT3_PN1_Ext_TB.Text = cd.contacts[2].PhoneNumbers[0].Ext;
             CNT3_PN2_Type_TB.Text = cd.contacts[2].PhoneNumbers[1].NumberType;
-            CNT3_PN2_Num_TB.Text = (cd.contacts[2].PhoneNumbers[1].PhoneNumber == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].PhoneNumber).ToString();
-            CNT3_PN2_Ext_TB.Text = (cd.contacts[2].PhoneNumbers[1].Ext == 0) ? "" : (cd.contacts[2].PhoneNumbers[1].Ext).ToString();
+            CNT3_PN2_Num_TB.Text = cd.contacts[2].PhoneNumbers[1].PhoneNumber;
+            CNT3_PN2_Ext_TB.Text = cd.contacts[2].PhoneNumbers[1].Ext;
         }
 
     }

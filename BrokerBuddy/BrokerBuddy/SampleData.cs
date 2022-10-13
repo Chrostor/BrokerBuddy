@@ -33,15 +33,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 8175468795,
+                                PhoneNumber = "8175468795",
                                 NumberType = "Cell",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -55,15 +55,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -77,15 +77,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     }
@@ -116,15 +116,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 6825468792,
+                                PhoneNumber = "6825468792",
                                 NumberType = "Office",
-                                Ext = 3084
+                                Ext = "3084"
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -138,15 +138,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 6828574652,
+                                PhoneNumber = "6828574652",
                                 NumberType = "Office",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -160,15 +160,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     }
@@ -199,15 +199,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 7928416481,
+                                PhoneNumber = "7928416481",
                                 NumberType = "Work",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 7921597582,
+                                PhoneNumber = "7921597582",
                                 NumberType = "Cell",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -221,15 +221,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 5221348547,
+                                PhoneNumber = "5221348547",
                                 NumberType = "Cell",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     },
@@ -243,15 +243,15 @@ namespace BrokerBuddy
                         {
                             new PhoneContacts
                             {
-                                PhoneNumber = 8176882248,
+                                PhoneNumber = "8176882248",
                                 NumberType = "Cell",
-                                Ext = 0
+                                Ext = ""
                             },
                             new PhoneContacts
                             {
-                                PhoneNumber = 0,
+                                PhoneNumber = "",
                                 NumberType = "",
-                                Ext = 0
+                                Ext = ""
                             }
                         }
                     }
