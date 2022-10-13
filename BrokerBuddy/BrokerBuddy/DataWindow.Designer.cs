@@ -105,7 +105,7 @@
             this.CustNameData.Name = "CustNameData";
             this.CustNameData.ReadOnly = true;
             this.CustNameData.Size = new System.Drawing.Size(209, 29);
-            this.CustNameData.TabIndex = 2;
+            this.CustNameData.TabIndex = 1;
             // 
             // BusNameData
             // 
@@ -114,7 +114,7 @@
             this.BusNameData.Name = "BusNameData";
             this.BusNameData.ReadOnly = true;
             this.BusNameData.Size = new System.Drawing.Size(209, 29);
-            this.BusNameData.TabIndex = 3;
+            this.BusNameData.TabIndex = 2;
             // 
             // CustomerCheckLabel
             // 
@@ -133,7 +133,7 @@
             this.CustCheckBox.Location = new System.Drawing.Point(634, 20);
             this.CustCheckBox.Name = "CustCheckBox";
             this.CustCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.CustCheckBox.TabIndex = 5;
+            this.CustCheckBox.TabIndex = 4;
             this.CustCheckBox.UseVisualStyleBackColor = true;
             // 
             // SiteCheckLabel
@@ -153,7 +153,7 @@
             this.SiteCheckBox.Location = new System.Drawing.Point(697, 20);
             this.SiteCheckBox.Name = "SiteCheckBox";
             this.SiteCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.SiteCheckBox.TabIndex = 7;
+            this.SiteCheckBox.TabIndex = 5;
             this.SiteCheckBox.UseVisualStyleBackColor = true;
             // 
             // IDNumLabel
@@ -196,7 +196,7 @@
             this.FCFSData.Location = new System.Drawing.Point(706, 46);
             this.FCFSData.Name = "FCFSData";
             this.FCFSData.Size = new System.Drawing.Size(65, 23);
-            this.FCFSData.TabIndex = 13;
+            this.FCFSData.TabIndex = 6;
             // 
             // ContactLabel
             // 
@@ -215,7 +215,7 @@
             this.FirstNameData1.Name = "FirstNameData1";
             this.FirstNameData1.ReadOnly = true;
             this.FirstNameData1.Size = new System.Drawing.Size(105, 29);
-            this.FirstNameData1.TabIndex = 15;
+            this.FirstNameData1.TabIndex = 8;
             // 
             // LastNameData1
             // 
@@ -224,7 +224,7 @@
             this.LastNameData1.Name = "LastNameData1";
             this.LastNameData1.ReadOnly = true;
             this.LastNameData1.Size = new System.Drawing.Size(105, 29);
-            this.LastNameData1.TabIndex = 16;
+            this.LastNameData1.TabIndex = 9;
             // 
             // TitleData1
             // 
@@ -233,7 +233,7 @@
             this.TitleData1.Name = "TitleData1";
             this.TitleData1.ReadOnly = true;
             this.TitleData1.Size = new System.Drawing.Size(205, 29);
-            this.TitleData1.TabIndex = 17;
+            this.TitleData1.TabIndex = 10;
             // 
             // EmailData1
             // 
@@ -242,7 +242,7 @@
             this.EmailData1.Name = "EmailData1";
             this.EmailData1.ReadOnly = true;
             this.EmailData1.Size = new System.Drawing.Size(312, 29);
-            this.EmailData1.TabIndex = 18;
+            this.EmailData1.TabIndex = 11;
             // 
             // NotesGeneralData
             // 
@@ -251,7 +251,7 @@
             this.NotesGeneralData.Name = "NotesGeneralData";
             this.NotesGeneralData.ReadOnly = true;
             this.NotesGeneralData.Size = new System.Drawing.Size(762, 143);
-            this.NotesGeneralData.TabIndex = 19;
+            this.NotesGeneralData.TabIndex = 40;
             this.NotesGeneralData.Text = "";
             // 
             // ContactListNumber
@@ -331,7 +331,7 @@
             this.NotesEquipmentData.Name = "NotesEquipmentData";
             this.NotesEquipmentData.ReadOnly = true;
             this.NotesEquipmentData.Size = new System.Drawing.Size(374, 143);
-            this.NotesEquipmentData.TabIndex = 27;
+            this.NotesEquipmentData.TabIndex = 41;
             this.NotesEquipmentData.Text = "";
             // 
             // NotesSpecialRequirementsData
@@ -341,7 +341,7 @@
             this.NotesSpecialRequirementsData.Name = "NotesSpecialRequirementsData";
             this.NotesSpecialRequirementsData.ReadOnly = true;
             this.NotesSpecialRequirementsData.Size = new System.Drawing.Size(374, 143);
-            this.NotesSpecialRequirementsData.TabIndex = 28;
+            this.NotesSpecialRequirementsData.TabIndex = 42;
             this.NotesSpecialRequirementsData.Text = "";
             // 
             // NotesEQPLabel
@@ -374,7 +374,7 @@
             this.BAData.Location = new System.Drawing.Point(706, 80);
             this.BAData.Name = "BAData";
             this.BAData.Size = new System.Drawing.Size(65, 23);
-            this.BAData.TabIndex = 31;
+            this.BAData.TabIndex = 7;
             // 
             // NotesSPCREQLabel
             // 
@@ -403,7 +403,7 @@
             this.CNT1_PN1_Type_TB.Name = "CNT1_PN1_Type_TB";
             this.CNT1_PN1_Type_TB.ReadOnly = true;
             this.CNT1_PN1_Type_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN1_Type_TB.TabIndex = 34;
+            this.CNT1_PN1_Type_TB.TabIndex = 12;
             // 
             // CNT1_PN_Type_Label
             // 
@@ -432,7 +432,7 @@
             this.CNT1_PN1_Num_TB.Name = "CNT1_PN1_Num_TB";
             this.CNT1_PN1_Num_TB.ReadOnly = true;
             this.CNT1_PN1_Num_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN1_Num_TB.TabIndex = 37;
+            this.CNT1_PN1_Num_TB.TabIndex = 13;
             // 
             // CNT1_PN1_Ext_TB
             // 
@@ -441,7 +441,7 @@
             this.CNT1_PN1_Ext_TB.Name = "CNT1_PN1_Ext_TB";
             this.CNT1_PN1_Ext_TB.ReadOnly = true;
             this.CNT1_PN1_Ext_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN1_Ext_TB.TabIndex = 38;
+            this.CNT1_PN1_Ext_TB.TabIndex = 14;
             // 
             // CNT1_Ext_Label
             // 
@@ -491,7 +491,7 @@
             this.LocationData.Name = "LocationData";
             this.LocationData.ReadOnly = true;
             this.LocationData.Size = new System.Drawing.Size(209, 56);
-            this.LocationData.TabIndex = 4;
+            this.LocationData.TabIndex = 3;
             this.LocationData.Text = "";
             // 
             // Delete_BTN
@@ -512,7 +512,7 @@
             this.CNT1_PN2_Ext_TB.Name = "CNT1_PN2_Ext_TB";
             this.CNT1_PN2_Ext_TB.ReadOnly = true;
             this.CNT1_PN2_Ext_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Ext_TB.TabIndex = 48;
+            this.CNT1_PN2_Ext_TB.TabIndex = 17;
             // 
             // CNT1_PN2_Num_TB
             // 
@@ -521,7 +521,7 @@
             this.CNT1_PN2_Num_TB.Name = "CNT1_PN2_Num_TB";
             this.CNT1_PN2_Num_TB.ReadOnly = true;
             this.CNT1_PN2_Num_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Num_TB.TabIndex = 47;
+            this.CNT1_PN2_Num_TB.TabIndex = 16;
             // 
             // CNT1_PN2_Type_TB
             // 
@@ -530,7 +530,7 @@
             this.CNT1_PN2_Type_TB.Name = "CNT1_PN2_Type_TB";
             this.CNT1_PN2_Type_TB.ReadOnly = true;
             this.CNT1_PN2_Type_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Type_TB.TabIndex = 46;
+            this.CNT1_PN2_Type_TB.TabIndex = 15;
             // 
             // label1
             // 

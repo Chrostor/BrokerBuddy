@@ -220,9 +220,8 @@ namespace BrokerBuddy
             {
                 _contacts.Add(NCD);
             }
-
+            FileHandler.SaveContactsJSON(_contacts);
             this.Hide();
-            //TODO: Check how many contact numbers
         }
 
         public void RefreshSearchResults()
@@ -269,22 +268,22 @@ namespace BrokerBuddy
             if (_NumOfContacts == 1) 
             {
                 int moveDistY = 300;
-                FirstNameData2 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData2", 8);
-                LastNameData2 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData2", 9);
-                ContactListNumber2 = CreateLabel(10, moveDistY + 3, "ContactListNumber2", 20, "2");
-                TitleData2 = CreateTextBox(253, moveDistY, 205, 29, "TitleData2", 10);
-                EmailData2 = CreateTextBox(463, moveDistY, 312, 29, "EmailData2", 11);
-                CNT2_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT2_PN_Type_Label", 25, "Type");
-                CNT2_Number_Label = CreateLabel(558, moveDistY + 36, "CNT2_Number_Label", 25, "Number");
+                FirstNameData2 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData2", 18);
+                LastNameData2 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData2", 19);
+                ContactListNumber2 = CreateLabel(10, moveDistY + 3, "ContactListNumber2", 41, "2");
+                TitleData2 = CreateTextBox(253, moveDistY, 205, 29, "TitleData2", 20);
+                EmailData2 = CreateTextBox(463, moveDistY, 312, 29, "EmailData2", 21);
+                CNT2_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT2_PN_Type_Label", 41, "Type");
+                CNT2_Number_Label = CreateLabel(558, moveDistY + 36, "CNT2_Number_Label", 42, "Number");
                 CNT2_Ext_Label = CreateLabel(669, moveDistY + 36, "CNT2_Ext_Label", 25, "Ext (if any)");
                 CNT2_PN1_Label = CreateLabel(422, moveDistY + 63, "CNT2_PN1_Label", 25, "1");
                 CNT2_PN2_Label = CreateLabel(422, moveDistY + 98, "CNT2_PN2_Label", 25, "2");
-                CNT2_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT2_PN1_Type_TB", 25);
-                CNT2_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 25);
-                CNT2_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 25);
+                CNT2_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT2_PN1_Type_TB", 22);
+                CNT2_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 23);
+                CNT2_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 24);
                 CNT2_PN2_Type_TB = CreateTextBox(447, moveDistY + 95, 105, 29, "CNT2_PN2_Type_TB", 25);
-                CNT2_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT2_PN2_Num_TB", 25);
-                CNT2_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT2_PN2_Ext_TB", 25);
+                CNT2_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT2_PN2_Num_TB", 26);
+                CNT2_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT2_PN2_Ext_TB", 27);
 
                 this.Controls.AddRange(new Control[] { 
                     FirstNameData2, LastNameData2, ContactListNumber2, TitleData2, EmailData2, 
@@ -301,22 +300,22 @@ namespace BrokerBuddy
                 moveLowerLabels(10);
                 this.Height = this.Height + 10;
                 int moveDistY = 450;
-                FirstNameData3 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData3", 8);
-                LastNameData3 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData3", 9);
+                FirstNameData3 = CreateTextBox(31, moveDistY, 105, 29, "FirstNameData3", 28);
+                LastNameData3 = CreateTextBox(142, moveDistY, 105, 29, "LastNameData3", 29);
                 ContactListNumber3 = CreateLabel(10, moveDistY + 3, "ContactListNumber3", 20, "3");
-                TitleData3 = CreateTextBox(253, moveDistY, 205, 29, "TitleData3", 10);
-                EmailData3 = CreateTextBox(463, moveDistY, 312, 29, "EmailData3", 11);
+                TitleData3 = CreateTextBox(253, moveDistY, 205, 29, "TitleData3", 30);
+                EmailData3 = CreateTextBox(463, moveDistY, 312, 29, "EmailData3", 31);
                 CNT3_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT3_PN_Type_Label", 25, "Type");
                 CNT3_Number_Label = CreateLabel(558, moveDistY + 36, "CNT3_Number_Label", 25, "Number");
                 CNT3_Ext_Label = CreateLabel(669, moveDistY + 36, "CNT3_Ext_Label", 25, "Ext (if any)");
                 CNT3_PN1_Label = CreateLabel(422, moveDistY + 63, "CNT3_PN1_Label", 25, "1");
                 CNT3_PN2_Label = CreateLabel(422, moveDistY + 98, "CNT3_PN2_Label", 25, "2");
-                CNT3_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT3_PN1_Type_TB", 25);
-                CNT3_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 25);
-                CNT3_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 25);
-                CNT3_PN2_Type_TB = CreateTextBox(447, moveDistY + 95, 105, 29, "CNT3_PN2_Type_TB", 25);
-                CNT3_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT3_PN2_Num_TB", 25);
-                CNT3_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT3_PN2_Ext_TB", 25);
+                CNT3_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT3_PN1_Type_TB", 32);
+                CNT3_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 33);
+                CNT3_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 34);
+                CNT3_PN2_Type_TB = CreateTextBox(447, moveDistY + 95, 105, 29, "CNT3_PN2_Type_TB", 35);
+                CNT3_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT3_PN2_Num_TB", 36);
+                CNT3_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT3_PN2_Ext_TB", 37);
 
                 this.Controls.AddRange(new Control[] {
                     FirstNameData3, LastNameData3, ContactListNumber3, TitleData3, EmailData3,

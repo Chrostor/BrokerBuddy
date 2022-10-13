@@ -35,17 +35,21 @@
             this.Add = new System.Windows.Forms.Button();
             this.custNameBox = new System.Windows.Forms.TextBox();
             this.busNameBox = new System.Windows.Forms.TextBox();
-            this.conNameBox = new System.Windows.Forms.TextBox();
+            this.conFirstNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.conLastNameBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.busLocationBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Greeting
             // 
             this.Greeting.AutoSize = true;
             this.Greeting.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Greeting.Location = new System.Drawing.Point(141, 300);
+            this.Greeting.Location = new System.Drawing.Point(187, 329);
             this.Greeting.Name = "Greeting";
             this.Greeting.Size = new System.Drawing.Size(534, 86);
             this.Greeting.TabIndex = 0;
@@ -101,12 +105,12 @@
             this.busNameBox.TabIndex = 2;
             this.busNameBox.TextChanged += new System.EventHandler(this.busNameBox_TextChanged);
             // 
-            // conNameBox
+            // conFirstNameBox
             // 
-            this.conNameBox.Location = new System.Drawing.Point(12, 217);
-            this.conNameBox.Name = "conNameBox";
-            this.conNameBox.Size = new System.Drawing.Size(120, 23);
-            this.conNameBox.TabIndex = 3;
+            this.conFirstNameBox.Location = new System.Drawing.Point(12, 217);
+            this.conFirstNameBox.Name = "conFirstNameBox";
+            this.conFirstNameBox.Size = new System.Drawing.Size(120, 23);
+            this.conFirstNameBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -134,9 +138,43 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(12, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 21);
+            this.label3.Size = new System.Drawing.Size(143, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Contact Name";
+            this.label3.Text = "Contact First Name";
+            // 
+            // conLastNameBox
+            // 
+            this.conLastNameBox.Location = new System.Drawing.Point(12, 273);
+            this.conLastNameBox.Name = "conLastNameBox";
+            this.conLastNameBox.Size = new System.Drawing.Size(120, 23);
+            this.conLastNameBox.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(12, 249);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Contact Last Name";
+            // 
+            // busLocationBox
+            // 
+            this.busLocationBox.Location = new System.Drawing.Point(12, 329);
+            this.busLocationBox.Name = "busLocationBox";
+            this.busLocationBox.Size = new System.Drawing.Size(120, 23);
+            this.busLocationBox.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(14, 305);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 21);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Location";
             // 
             // MainWindow
             // 
@@ -145,10 +183,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.busLocationBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.conLastNameBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.conNameBox);
+            this.Controls.Add(this.conFirstNameBox);
             this.Controls.Add(this.busNameBox);
             this.Controls.Add(this.custNameBox);
             this.Controls.Add(this.Add);
@@ -173,9 +215,13 @@
         private Button Add;
         private TextBox custNameBox;
         private TextBox busNameBox;
-        private TextBox conNameBox;
+        private TextBox conFirstNameBox;
         private Label label1;
         private Label label2;
         private Label label3;
+        private TextBox conLastNameBox;
+        private Label label4;
+        private TextBox busLocationBox;
+        private Label label5;
     }
 }

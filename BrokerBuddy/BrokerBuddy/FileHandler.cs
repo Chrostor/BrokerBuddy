@@ -4,28 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Text.Json;
 
 namespace BrokerBuddy
 {
     internal class FileHandler
     {
-        static string FileNameSQL = "ContactDatabase.sqlite";
+        static string FileNameJSON = "ContactDatabase.json";
 
-        static public void SQLFileCheck()
+        static public void JSONFileCheck()
         {
-            if (!File.Exists(FileNameSQL))
+            if (!File.Exists(FileNameJSON))
             {
-                SQLiteConnection.CreateFile(FileNameSQL);
-                //using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + FileNameSQL + ";Version=3;"))
-                //{
-                //    conn.Open();
-                //    SQLiteCommand cmd = conn.CreateCommand();
-                //    cmd.CommandText = "CREATE TABLE Contacts (FirstName TEXT, LastName TEXT, Number INTEGER)";
-                //    cmd.ExecuteNonQuery();
-                //    conn.Close();
-                //}
-
+                File.Create(FileNameJSON);
             }
+        }
+
+        static public List<ClientData> LoadContactsJSON()
+        {
+            string readInString = File.ReadAllText(FileNameJSON);
+            List<ClientData> conts = JsonSerializer.Deserialize<List<ClientData>>(readInString);
+            return conts;
+        }
+
+        static public void SaveContactsJSON(List<ClientData> conts)
+        {
+            string jsonString = JsonSerializer.Serialize(conts);
+            File.WriteAllText(FileNameJSON, jsonString);
         }
 
         //public void saveContacts(List<Contact> contacts)
@@ -55,27 +60,27 @@ namespace BrokerBuddy
         //    }
         //}
 
-        //public List<Contact> loadContacts()
+        //public list<contact> loadcontacts()
         //{
-        //    List<Contact> contacts = new List<Contact>();
-        //    using (SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + FileNameSQL + ";Version=3;"))
+        //    list<contact> contacts = new list<contact>();
+        //    using (sqliteconnection m_dbconnection = new sqliteconnection("data source=" + filenamesql + ";version=3;"))
         //    {
-        //        m_dbConnection.Open();
-        //        SQLiteDataReader reader;
-        //        SQLiteCommand cmd;
-        //        cmd = m_dbConnection.CreateCommand();
-        //        cmd.CommandText = "SELECT * FROM Contacts";
-        //        reader = cmd.ExecuteReader();
-        //        while (reader.Read())
+        //        m_dbconnection.open();
+        //        sqlitedatareader reader;
+        //        sqlitecommand cmd;
+        //        cmd = m_dbconnection.createcommand();
+        //        cmd.commandtext = "select * from contacts";
+        //        reader = cmd.executereader();
+        //        while (reader.read())
         //        {
-        //            long numReader = reader.GetInt64(2);
-        //            string first = reader.GetString(0);
-        //            string last = reader.GetString(1);
-        //            contacts.Add(new Contact(first, last, numReader));
+        //            long numreader = reader.getint64(2);
+        //            string first = reader.getstring(0);
+        //            string last = reader.getstring(1);
+        //            contacts.add(new contact(first, last, numreader));
         //        }
-        //        m_dbConnection.Close();
+        //        m_dbconnection.close();
         //    }
-        //    //SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=" + FileNameSQL + ";Version=3;");
+
 
         //    return contacts;
         //}

@@ -495,7 +495,7 @@
             this.CNT1_PN2_Type_TB.Location = new System.Drawing.Point(447, 255);
             this.CNT1_PN2_Type_TB.Name = "CNT1_PN2_Type_TB";
             this.CNT1_PN2_Type_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Type_TB.TabIndex = 47;
+            this.CNT1_PN2_Type_TB.TabIndex = 15;
             // 
             // CNT1_PN2_Num_TB
             // 
@@ -503,7 +503,7 @@
             this.CNT1_PN2_Num_TB.Location = new System.Drawing.Point(558, 255);
             this.CNT1_PN2_Num_TB.Name = "CNT1_PN2_Num_TB";
             this.CNT1_PN2_Num_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Num_TB.TabIndex = 48;
+            this.CNT1_PN2_Num_TB.TabIndex = 16;
             // 
             // CNT1_PN2_Ext_TB
             // 
@@ -511,7 +511,7 @@
             this.CNT1_PN2_Ext_TB.Location = new System.Drawing.Point(669, 255);
             this.CNT1_PN2_Ext_TB.Name = "CNT1_PN2_Ext_TB";
             this.CNT1_PN2_Ext_TB.Size = new System.Drawing.Size(105, 29);
-            this.CNT1_PN2_Ext_TB.TabIndex = 49;
+            this.CNT1_PN2_Ext_TB.TabIndex = 17;
             // 
             // CNT1_PN2_Label
             // 

@@ -22,16 +22,9 @@ namespace BrokerBuddy
             lv.Items.Clear();
             foreach (var item in _clientData)
             {
-                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName };
+                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName, item.location };
                 var li = lv.Items.Add(new ListViewItem(row));
-                
-                
             }
-        }
-
-        private void ResultsView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void SearchResultView_Click(object sender, EventArgs e)
@@ -46,7 +39,6 @@ namespace BrokerBuddy
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

@@ -33,6 +33,7 @@
             this.col_ID = new System.Windows.Forms.ColumnHeader();
             this.col_Name = new System.Windows.Forms.ColumnHeader();
             this.col_BusName = new System.Windows.Forms.ColumnHeader();
+            this.col_Location = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // SearchResultView
@@ -40,7 +41,8 @@
             this.SearchResultView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.col_ID,
             this.col_Name,
-            this.col_BusName});
+            this.col_BusName,
+            this.col_Location});
             this.SearchResultView.FullRowSelect = true;
             this.SearchResultView.GridLines = true;
             this.SearchResultView.Location = new System.Drawing.Point(0, 0);
@@ -65,6 +67,11 @@
             this.col_BusName.Text = "Business Name";
             this.col_BusName.Width = 120;
             // 
+            // col_Location
+            // 
+            this.col_Location.Text = "Location";
+            this.col_Location.Width = 400;
+            // 
             // SearchResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -85,5 +92,6 @@
         private ColumnHeader col_ID;
         private ColumnHeader col_Name;
         private ColumnHeader col_BusName;
+        private ColumnHeader col_Location;
     }
 }

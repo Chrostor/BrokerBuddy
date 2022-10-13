@@ -8,13 +8,14 @@ namespace BrokerBuddy
         [STAThread]
         static void Main()
         {
-            FileHandler.SQLFileCheck();
+            FileHandler.JSONFileCheck();
             //TODO: Sample data for now.  Goal is to load from file
-            var sampleData = SampleData.createSamples();
+            var clientData = FileHandler.LoadContactsJSON();
+            //FileHandler.SaveContactsJSON(sampleData);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainWindow(sampleData));
+            Application.Run(new MainWindow(clientData));
         }
     }
 }
