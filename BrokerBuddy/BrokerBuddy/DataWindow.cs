@@ -56,6 +56,7 @@ namespace BrokerBuddy
             sr = SR;
             cd = CD;
             InitializeComponent();
+            this.Text = cd.businessName;
             this.IDNumData.Text = (cd.ID).ToString();
             this.CustNameData.Text = cd.customerName;
             this.BusNameData.Text = cd.businessName;
@@ -123,7 +124,7 @@ namespace BrokerBuddy
             lv.Items.Clear();
             foreach (var item in data)
             {
-                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName };
+                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName, item.location };
                 var li = lv.Items.Add(new ListViewItem(row));
             }
             FileHandler.SaveContactsJSON(data);
@@ -153,7 +154,8 @@ namespace BrokerBuddy
                 Location = new System.Drawing.Point(px, py), //160 before change
                 Name = name,
                 Size = new System.Drawing.Size(sl, sw),
-                TabIndex = ti
+                TabIndex = ti,
+                ReadOnly = true
             };
             return TB;
         }

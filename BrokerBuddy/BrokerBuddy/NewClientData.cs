@@ -233,7 +233,7 @@ namespace BrokerBuddy
             lv.Items.Clear();
             foreach (var item in _contacts)
             {
-                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName };
+                var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName, item.location };
                 var li = lv.Items.Add(new ListViewItem(row));
             }
             
@@ -298,7 +298,6 @@ namespace BrokerBuddy
             
             if (_NumOfContacts == 2) 
             {
-                this.Location = new System.Drawing.Point(0, 0);
                 moveLowerLabels(10);
                 this.Height = this.Height + 10;
                 int moveDistY = 450;

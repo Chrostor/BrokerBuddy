@@ -48,7 +48,7 @@ namespace BrokerBuddy
                     results.Add(item);
                 }
             }
-            SearchResults SR = new SearchResults(results);
+            SearchResults SR = new SearchResults(results, _clientData);
             SR.Show();
         }
 
