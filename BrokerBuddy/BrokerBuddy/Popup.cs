@@ -42,6 +42,15 @@ namespace BrokerBuddy
             
         }
 
+        public Popup(string str) 
+        {
+            InitializeComponent();
+            ErrorLabel.Text = str;
+            ErrorLabel.Left += 50;
+            button1.Text = "Cancel";
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

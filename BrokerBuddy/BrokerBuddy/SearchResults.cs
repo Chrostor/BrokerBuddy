@@ -13,7 +13,7 @@ namespace BrokerBuddy
     public partial class SearchResults : Form
     {
         List<ClientData> _clientData;
-        List<ClientData> _results;
+        public List<ClientData> _results;
         //All result list
         public SearchResults(List<ClientData> CD)
         {
@@ -32,8 +32,8 @@ namespace BrokerBuddy
         //Results of specified search
         public SearchResults(List<ClientData> MWSR, List<ClientData> CD) 
         {
-            _clientData = CD;
-            _results = MWSR;
+            _clientData = CD; // Full client list
+            _results = MWSR; // Search Result smaller client list
             InitializeComponent();
 
             ListView lv = SearchResultView;
@@ -56,7 +56,6 @@ namespace BrokerBuddy
                 ClientData cd = _clientData.Find(i => i.ID.Equals(target));
                 DataWindow dw = new DataWindow(cd, _clientData, this);
 
-                
             }
             catch (Exception)
             {

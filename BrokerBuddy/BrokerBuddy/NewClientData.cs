@@ -94,7 +94,6 @@ namespace BrokerBuddy
             }
             //Fill all data windows
             
-
             this.Show();
         }
 
@@ -111,6 +110,12 @@ namespace BrokerBuddy
                 PU.Show();
                 return;
             }
+            if (FCFSData.Text == "N/A" || BAData.Text == "N/A") 
+            {
+                Popup PU = new Popup("Please select 'Yes' or 'No' \r\nfor FCFS and BA before saving.");
+                PU.Show();
+                return;
+            }
             ClientData NCD = new ClientData();
             NCD.ID = Convert.ToInt16(IDNumData.Text);
             NCD.customerName = CustNameData.Text;
@@ -120,20 +125,6 @@ namespace BrokerBuddy
             NCD.site = SiteCheckBox.Checked;
             NCD.FCFS = FCFSData.Text == "Yes" ? true : false;
             NCD.BA = BAData.Text == "Yes" ? true : false;
-            //long CNT1_PN1 = (CNT1_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN1_Num_TB.Text);
-            //long CNT1_PN2 = (CNT1_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT1_PN2_Num_TB.Text);
-            //int CNT1_PN1_E = (CNT1_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN1_Ext_TB.Text);
-            //int CNT1_PN2_E = (CNT1_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT1_PN2_Ext_TB.Text);
-            
-            //long CNT2_PN1 = (CNT2_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN1_Num_TB.Text); 
-            //long CNT2_PN2 = (CNT2_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT2_PN2_Num_TB.Text);
-            //int CNT2_PN1_E = (CNT2_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN1_Ext_TB.Text);
-            //int CNT2_PN2_E = (CNT2_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT2_PN2_Ext_TB.Text);
-            
-            //long CNT3_PN1 = (CNT3_PN1_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN1_Num_TB.Text);
-            //long CNT3_PN2 = (CNT3_PN2_Num_TB.Text == "") ? 0 : long.Parse(CNT3_PN2_Num_TB.Text);
-            //int CNT3_PN1_E = (CNT3_PN1_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN1_Ext_TB.Text);
-            //int CNT3_PN2_E = (CNT3_PN2_Ext_TB.Text == "") ? 0 : int.Parse(CNT3_PN2_Ext_TB.Text);
             NCD.contacts = new List<Contact>
                         {
                             //Contact 1
@@ -228,15 +219,23 @@ namespace BrokerBuddy
 
         public void RefreshSearchResults()
         {
+            List<ClientData> tempContacts;
+            if (SR._results is null)
+            {
+                tempContacts = _contacts;
+            }
+            else
+            { 
+                tempContacts = SR._results;
+            }
             
             ListView lv = SR.SearchResultView;
             lv.Items.Clear();
-            foreach (var item in _contacts)
+            foreach (var item in tempContacts)
             {
                 var row = new string[] { (item.ID).ToString(), item.customerName, item.businessName, item.location };
                 var li = lv.Items.Add(new ListViewItem(row));
             }
-            
         }
 
         private void AddContact() 
