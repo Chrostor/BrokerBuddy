@@ -56,7 +56,15 @@ namespace BrokerBuddy
         public NewClientData(List<ClientData> CD)
         {
             _contacts = CD;
-            _currentID = _contacts[_contacts.Count - 1].ID + 1;
+            if (_contacts.Count == 0)
+            {
+                _currentID = 0;
+            }
+            else 
+            {
+                _currentID = _contacts[_contacts.Count - 1].ID + 1;
+            }
+            
             InitializeComponent();
             IDNumData.Text = _currentID.ToString();
             FCFSData.Text = "N/A";
@@ -274,16 +282,16 @@ namespace BrokerBuddy
                 ContactListNumber2 = CreateLabel(10, moveDistY + 3, "ContactListNumber2", 41, "2");
                 TitleData2 = CreateTextBox(253, moveDistY, 205, 29, "TitleData2", 20);
                 EmailData2 = CreateTextBox(463, moveDistY, 312, 29, "EmailData2", 21);
-                CNT2_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT2_PN_Type_Label", 41, "Type");
-                CNT2_Number_Label = CreateLabel(558, moveDistY + 36, "CNT2_Number_Label", 42, "Number");
+                CNT2_PN_Type_Label = CreateLabel(397, moveDistY + 36, "CNT2_PN_Type_Label", 41, "Type");
+                CNT2_Number_Label = CreateLabel(508, moveDistY + 36, "CNT2_Number_Label", 42, "Number");
                 CNT2_Ext_Label = CreateLabel(669, moveDistY + 36, "CNT2_Ext_Label", 25, "Ext (if any)");
-                CNT2_PN1_Label = CreateLabel(422, moveDistY + 63, "CNT2_PN1_Label", 25, "1");
-                CNT2_PN2_Label = CreateLabel(422, moveDistY + 98, "CNT2_PN2_Label", 25, "2");
-                CNT2_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT2_PN1_Type_TB", 22);
-                CNT2_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 23);
+                CNT2_PN1_Label = CreateLabel(372, moveDistY + 63, "CNT2_PN1_Label", 25, "1");
+                CNT2_PN2_Label = CreateLabel(372, moveDistY + 98, "CNT2_PN2_Label", 25, "2");
+                CNT2_PN1_Type_TB = CreateTextBox(397, moveDistY + 60, 105, 29, "CNT2_PN1_Type_TB", 22);
+                CNT2_PN1_Num_TB = CreateTextBox(508, moveDistY + 60, 155, 29, "CNT2_PN1_Num_TB", 23);
                 CNT2_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT2_PN1_Num_TB", 24);
-                CNT2_PN2_Type_TB = CreateTextBox(447, moveDistY + 95, 105, 29, "CNT2_PN2_Type_TB", 25);
-                CNT2_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT2_PN2_Num_TB", 26);
+                CNT2_PN2_Type_TB = CreateTextBox(397, moveDistY + 95, 105, 29, "CNT2_PN2_Type_TB", 25);
+                CNT2_PN2_Num_TB = CreateTextBox(508, moveDistY + 95, 155, 29, "CNT2_PN2_Num_TB", 26);
                 CNT2_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT2_PN2_Ext_TB", 27);
 
                 this.Controls.AddRange(new Control[] { 
@@ -305,16 +313,16 @@ namespace BrokerBuddy
                 ContactListNumber3 = CreateLabel(10, moveDistY + 3, "ContactListNumber3", 20, "3");
                 TitleData3 = CreateTextBox(253, moveDistY, 205, 29, "TitleData3", 30);
                 EmailData3 = CreateTextBox(463, moveDistY, 312, 29, "EmailData3", 31);
-                CNT3_PN_Type_Label = CreateLabel(447, moveDistY + 36, "CNT3_PN_Type_Label", 25, "Type");
-                CNT3_Number_Label = CreateLabel(558, moveDistY + 36, "CNT3_Number_Label", 25, "Number");
+                CNT3_PN_Type_Label = CreateLabel(397, moveDistY + 36, "CNT3_PN_Type_Label", 25, "Type");
+                CNT3_Number_Label = CreateLabel(508, moveDistY + 36, "CNT3_Number_Label", 25, "Number");
                 CNT3_Ext_Label = CreateLabel(669, moveDistY + 36, "CNT3_Ext_Label", 25, "Ext (if any)");
-                CNT3_PN1_Label = CreateLabel(422, moveDistY + 63, "CNT3_PN1_Label", 25, "1");
-                CNT3_PN2_Label = CreateLabel(422, moveDistY + 98, "CNT3_PN2_Label", 25, "2");
-                CNT3_PN1_Type_TB = CreateTextBox(447, moveDistY + 60, 105, 29, "CNT3_PN1_Type_TB", 32);
-                CNT3_PN1_Num_TB = CreateTextBox(558, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 33);
+                CNT3_PN1_Label = CreateLabel(372, moveDistY + 63, "CNT3_PN1_Label", 25, "1");
+                CNT3_PN2_Label = CreateLabel(372, moveDistY + 98, "CNT3_PN2_Label", 25, "2");
+                CNT3_PN1_Type_TB = CreateTextBox(397, moveDistY + 60, 105, 29, "CNT3_PN1_Type_TB", 32);
+                CNT3_PN1_Num_TB = CreateTextBox(508, moveDistY + 60, 155, 29, "CNT3_PN1_Num_TB", 33);
                 CNT3_PN1_Ext_TB = CreateTextBox(669, moveDistY + 60, 105, 29, "CNT3_PN1_Num_TB", 34);
-                CNT3_PN2_Type_TB = CreateTextBox(447, moveDistY + 95, 105, 29, "CNT3_PN2_Type_TB", 35);
-                CNT3_PN2_Num_TB = CreateTextBox(558, moveDistY + 95, 105, 29, "CNT3_PN2_Num_TB", 36);
+                CNT3_PN2_Type_TB = CreateTextBox(397, moveDistY + 95, 105, 29, "CNT3_PN2_Type_TB", 35);
+                CNT3_PN2_Num_TB = CreateTextBox(508, moveDistY + 95, 155, 29, "CNT3_PN2_Num_TB", 36);
                 CNT3_PN2_Ext_TB = CreateTextBox(669, moveDistY + 95, 105, 29, "CNT3_PN2_Ext_TB", 37);
 
                 this.Controls.AddRange(new Control[] {

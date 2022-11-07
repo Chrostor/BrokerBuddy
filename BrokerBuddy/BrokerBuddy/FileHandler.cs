@@ -22,6 +22,7 @@ namespace BrokerBuddy
 
         static public List<ClientData> LoadContactsJSON()
         {
+            
             string readInString = File.ReadAllText(FileNameJSON);
             List<ClientData> conts = JsonSerializer.Deserialize<List<ClientData>>(readInString);
             return conts;

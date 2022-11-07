@@ -109,5 +109,14 @@ namespace BrokerBuddy
         {
             keyDownHandler(e);
         }
+
+        private void ClearSearchBtn_Click(object sender, EventArgs e)
+        {
+            custNameBox.Text = "";
+            busNameBox.Text = "";
+            conFirstNameBox.Text = "";
+            conLastNameBox.Text = "";
+            busLocationBox.Text = "";
+        }
     }
 }

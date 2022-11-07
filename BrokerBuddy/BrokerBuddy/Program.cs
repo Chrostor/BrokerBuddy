@@ -6,11 +6,21 @@ namespace BrokerBuddy
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+        
         static void Main()
         {
+            List<ClientData> clientData = new List<ClientData>();
             FileHandler.JSONFileCheck();
             //TODO: Sample data for now.  Goal is to load from file
-            var clientData = FileHandler.LoadContactsJSON();
+            try
+            {
+                clientData = FileHandler.LoadContactsJSON();
+            }
+            catch (System.Text.Json.JsonException e) 
+            {
+                
+            }
+            
             clientData.Sort((x, y) => x.ID.CompareTo(y.ID));
             //clientData.AddRange(SampleData.createSamples());
             //FileHandler.SaveContactsJSON(clientData);

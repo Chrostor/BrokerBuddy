@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.busLocationBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ClearSearchBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Greeting
@@ -181,6 +182,17 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Location";
             // 
+            // ClearSearchBtn
+            // 
+            this.ClearSearchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClearSearchBtn.Location = new System.Drawing.Point(12, 377);
+            this.ClearSearchBtn.Name = "ClearSearchBtn";
+            this.ClearSearchBtn.Size = new System.Drawing.Size(120, 61);
+            this.ClearSearchBtn.TabIndex = 14;
+            this.ClearSearchBtn.Text = "Clear Search";
+            this.ClearSearchBtn.UseVisualStyleBackColor = true;
+            this.ClearSearchBtn.Click += new System.EventHandler(this.ClearSearchBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -188,6 +200,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ClearSearchBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.busLocationBox);
             this.Controls.Add(this.label4);
@@ -228,5 +241,6 @@
         private Label label4;
         private TextBox busLocationBox;
         private Label label5;
+        private Button ClearSearchBtn;
     }
 }

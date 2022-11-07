@@ -390,7 +390,7 @@
             // 
             this.CNT1_PN_Label.AutoSize = true;
             this.CNT1_PN_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN_Label.Location = new System.Drawing.Point(308, 196);
+            this.CNT1_PN_Label.Location = new System.Drawing.Point(258, 196);
             this.CNT1_PN_Label.Name = "CNT1_PN_Label";
             this.CNT1_PN_Label.Size = new System.Drawing.Size(133, 21);
             this.CNT1_PN_Label.TabIndex = 33;
@@ -399,7 +399,7 @@
             // CNT1_PN1_Type_TB
             // 
             this.CNT1_PN1_Type_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN1_Type_TB.Location = new System.Drawing.Point(447, 220);
+            this.CNT1_PN1_Type_TB.Location = new System.Drawing.Point(397, 220);
             this.CNT1_PN1_Type_TB.Name = "CNT1_PN1_Type_TB";
             this.CNT1_PN1_Type_TB.ReadOnly = true;
             this.CNT1_PN1_Type_TB.Size = new System.Drawing.Size(105, 29);
@@ -409,7 +409,7 @@
             // 
             this.CNT1_PN_Type_Label.AutoSize = true;
             this.CNT1_PN_Type_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN_Type_Label.Location = new System.Drawing.Point(447, 196);
+            this.CNT1_PN_Type_Label.Location = new System.Drawing.Point(397, 196);
             this.CNT1_PN_Type_Label.Name = "CNT1_PN_Type_Label";
             this.CNT1_PN_Type_Label.Size = new System.Drawing.Size(42, 21);
             this.CNT1_PN_Type_Label.TabIndex = 35;
@@ -419,7 +419,7 @@
             // 
             this.CNT1_Number_Label.AutoSize = true;
             this.CNT1_Number_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_Number_Label.Location = new System.Drawing.Point(558, 196);
+            this.CNT1_Number_Label.Location = new System.Drawing.Point(508, 196);
             this.CNT1_Number_Label.Name = "CNT1_Number_Label";
             this.CNT1_Number_Label.Size = new System.Drawing.Size(68, 21);
             this.CNT1_Number_Label.TabIndex = 36;
@@ -428,10 +428,10 @@
             // CNT1_PN1_Num_TB
             // 
             this.CNT1_PN1_Num_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN1_Num_TB.Location = new System.Drawing.Point(558, 220);
+            this.CNT1_PN1_Num_TB.Location = new System.Drawing.Point(508, 220);
             this.CNT1_PN1_Num_TB.Name = "CNT1_PN1_Num_TB";
             this.CNT1_PN1_Num_TB.ReadOnly = true;
-            this.CNT1_PN1_Num_TB.Size = new System.Drawing.Size(105, 29);
+            this.CNT1_PN1_Num_TB.Size = new System.Drawing.Size(155, 29);
             this.CNT1_PN1_Num_TB.TabIndex = 13;
             // 
             // CNT1_PN1_Ext_TB
@@ -467,7 +467,7 @@
             // 
             this.CNT1_PN1_Label.AutoSize = true;
             this.CNT1_PN1_Label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN1_Label.Location = new System.Drawing.Point(422, 223);
+            this.CNT1_PN1_Label.Location = new System.Drawing.Point(372, 223);
             this.CNT1_PN1_Label.Name = "CNT1_PN1_Label";
             this.CNT1_PN1_Label.Size = new System.Drawing.Size(19, 21);
             this.CNT1_PN1_Label.TabIndex = 42;
@@ -517,16 +517,16 @@
             // CNT1_PN2_Num_TB
             // 
             this.CNT1_PN2_Num_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN2_Num_TB.Location = new System.Drawing.Point(558, 255);
+            this.CNT1_PN2_Num_TB.Location = new System.Drawing.Point(508, 255);
             this.CNT1_PN2_Num_TB.Name = "CNT1_PN2_Num_TB";
             this.CNT1_PN2_Num_TB.ReadOnly = true;
-            this.CNT1_PN2_Num_TB.Size = new System.Drawing.Size(105, 29);
+            this.CNT1_PN2_Num_TB.Size = new System.Drawing.Size(155, 29);
             this.CNT1_PN2_Num_TB.TabIndex = 16;
             // 
             // CNT1_PN2_Type_TB
             // 
             this.CNT1_PN2_Type_TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CNT1_PN2_Type_TB.Location = new System.Drawing.Point(447, 255);
+            this.CNT1_PN2_Type_TB.Location = new System.Drawing.Point(397, 255);
             this.CNT1_PN2_Type_TB.Name = "CNT1_PN2_Type_TB";
             this.CNT1_PN2_Type_TB.ReadOnly = true;
             this.CNT1_PN2_Type_TB.Size = new System.Drawing.Size(105, 29);
@@ -536,7 +536,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(422, 258);
+            this.label1.Location = new System.Drawing.Point(372, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 21);
             this.label1.TabIndex = 49;
