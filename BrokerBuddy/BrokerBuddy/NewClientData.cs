@@ -380,9 +380,12 @@ namespace BrokerBuddy
             LastNameData1.Text = cd.contacts[0].LastName;
             EmailData1.Text = cd.contacts[0].Email;
             TitleData1.Text = cd.contacts[0].Title;
-            CNT1_PN1_Type_TB.Text = (cd.contacts[0].PhoneNumbers[0].NumberType).ToString();
-            CNT1_PN1_Num_TB.Text = (cd.contacts[0].PhoneNumbers[0].PhoneNumber).ToString();
-            CNT1_PN1_Ext_TB.Text = (cd.contacts[0].PhoneNumbers[0].Ext).ToString() == "0" ? "" : (cd.contacts[0].PhoneNumbers[0].Ext).ToString();
+            CNT1_PN1_Type_TB.Text = cd.contacts[0].PhoneNumbers[0].NumberType;
+            CNT1_PN1_Num_TB.Text = cd.contacts[0].PhoneNumbers[0].PhoneNumber;
+            CNT1_PN1_Ext_TB.Text = cd.contacts[0].PhoneNumbers[0].Ext;
+            CNT1_PN2_Type_TB.Text = cd.contacts[0].PhoneNumbers[1].NumberType;
+            CNT1_PN2_Num_TB.Text = cd.contacts[0].PhoneNumbers[1].PhoneNumber;
+            CNT1_PN2_Ext_TB.Text = cd.contacts[0].PhoneNumbers[1].Ext;
         }
 
         private void FillDataWindowsContact2(ClientData cd) 
